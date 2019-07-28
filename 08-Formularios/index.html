@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Formularios</h1>
+
+    <form class="" method="post">
+
+
+      <fieldset>
+        <legend>fieldset</legend>
+        <div class="">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" type="text" name="name" value="">
+        </div>
+
+        <div class="">
+          <label >Ingrese su correo<input type="email" name="" value="" required></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos</legend>
+        <div class="">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" type="text" name="name" value="">
+        </div>
+
+  <div class="">
+    <label>Ingrese su contraseña<input id="password" type="password" name="password" value=""></label>
+    <input type="password" name="password" value="" placeholder="Ingrese su contraseña" required>
+  </div>
+
+  <div class="">
+    <label >Ingrese su correo<input type="email" name="" value=""></label>
+  </div>
+
+  <div class="">
+    <label>Fecha de nacimiento<input type="date" name="" value=""></label>
+  </div>
+
+  <div class="">
+    <label>Cantidad <input type="number" name="" value="5" readonly></label>
+  </div>
+      </fieldset>
+
+    <fieldset>
+      <legend>Pasatiempos</legend>
+      <label><input type="checkbox" name="" value="">Deportes</label>
+      <label><input type="checkbox" name="" value="">Cine</label>
+      <label><input type="checkbox" name="" value="">Música</label>
+      <label><input type="checkbox" name="" value="">Leer</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>genero</legend>
+      <label><input type="radio" name="genero" value="">Hombre</label>
+      <label><input type="radio" name="genero" value="">Mujer</label>
+      <label><input type="radio" name="genero" value="">Otro</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Opciones</legend>
+      <label for="country">Escoge tu pais</label>
+      <select class="" name="country" id="country" multiple>
+        <optgroup label="America">
+          <option value="Perú">Perú</option>
+          <option value="Chile">Chile</option>
+          <option value="venezuela">Venezuela</option>
+        </optgroup>
+        <optgroup label="Europa">
+          <option value="Perú">España</option>
+          <option value="Chile">Italia</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Opciones</legend>
+      <label for="country">Escoge tu pais</label>
+      <select class="" name="country" id="country" >
+        <optgroup label="America">
+          <option value="Perú">Perú</option>
+          <option value="Chile">Chile</option>
+          <option value="venezuela">Venezuela</option>
+        </optgroup>
+        <optgroup label="Europa">
+          <option value="Perú">España</option>
+          <option value="Chile">Italia</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+<fieldset>
+  <legend>textarea</legend>
+  <textarea name="name" rows="10" cols="80" placeholder="Mensaje..."></textarea>
+</fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script >
+      document.getElementById('password').addEventListener('keyup', e =>{
+        console.log(e.target.value)
+      })
+    </script>
+
+  </body>
+</html>

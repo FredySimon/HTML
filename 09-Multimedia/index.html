@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Multimedia</h1>
+    <!-- <video src="media/video.mp4" poster="http://www.alegsa.com.ar/Imagen/tecnologia_thumb.jpg" controls> -->
+
+<hr><br>
+
+<video id="video" src="media/video.mp4" poster="http://www.alegsa.com.ar/Imagen/tecnologia_thumb.jpg" ></video>
+
+<hr><br>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+
+
+<audio src="media/Nasty girl-Notorious.mp3" controls>
+
+</audio>
+    <!-- console.dir($0) propiedades y metodos -->
+
+    <script>
+      const video = document.getElementById('video');
+      const play = document.getElementById('play');
+      const pause = document.getElementById('pause');
+
+      play.addEventListener('click', ()=> {
+        video.play();
+      })
+
+      pause.addEventListener('click', ()=> {
+        video.pause()
+      })
+    </script>
+  </body>
+</html>
