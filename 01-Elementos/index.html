@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Defina el conjunto de caracteres utilizado.-->
+    <meta charset="UTF-8">
+    <!--Configuración de la ventana gráfica-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Defina una descripción de su página web.-->
+    <meta name="description" content="Tutorial HTML-Capitulo de elementos.">
+    <!--Definir palabras clave para motores de búsqueda.-->
+    <meta name="keywords" content="Tutorial, HTML, CSS, JavaScript.">
+    <!--Definir el autor de una página.-->
+    <meta name="author" content="Fredy Simón">
+    <!--Actualizar documento cada 30 segundos.-->
+    <meta http-equiv="refresh" content="30"> 
+    <title>Elementos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: gray;
+        }
+    </style>
+    <base href="" target="_blank">
+</head>
+
+<body>
+    <h1>Elementos</h1>
+    <hr>
+
+    <p>Los elementos HTML pueden estar anidados (los elementos pueden contener elementos).</p>
+    <p>Los elementos HTML sin contenido se denominan elementos vacíos.</p>
+    <p>Los elementos vacíos se pueden "cerrar" en la etiqueta de apertura de esta manera: <br />. HTML5 no requiere que
+        se cierren elementos vacíos. Pero si desea una validación más estricta, o si necesita hacer que su documento sea
+        legible por analizadores XML, debe cerrar todos los elementos HTML correctamente.</p>
+    <p>Las etiquetas HTML no distinguen entre mayúsculas y minúsculas: P> significa lo mismo que p>.</p>
+
+    <p>Este es un <br> parrafo con un salto de linea.</p>
+    <hr>
+
+    <h2>El elemento HTML head</h2>
+    <p>El head elemento HTML es un contenedor de metadatos. Los metadatos HTML son datos sobre el documento HTML. Los metadatos no se muestran. Se coloca entre la html etiqueta y la body etiqueta.</p>
+    <p>Nota: Los metadatos generalmente definen el título del documento, el conjunto de caracteres, los estilos, los scripts y otra información meta.</p>
+    <p>Las siguientes etiquetas son metadatos:</p>
+    <ul>
+        <li>title</li>
+        <p>El title elemento define el título del documento, define un título en la pestaña del navegador, proporciona un título para la página cuando se agrega a favoritos, muestra un título para la página en los resultados del motor de búsqueda y es obligatorio en todos los documentos HTML.</p>
+        <li>style</li>
+        <p>El style elemento se usa para definir información de estilo para una sola página HTML.</p>
+        <li>meta</li>
+        <p>El meta elemento se utiliza para especificar qué conjunto de caracteres se utiliza, descripción de la página, palabras clave, autor y otros metadatos. Los navegadores (cómo mostrar contenido), los motores de búsqueda (palabras clave) y otros servicios web utilizan los metadatos.</p>
+        <li>link</li>
+        <p>El link elemento se utiliza para vincular a hojas de estilo externas.</p>
+        <li>script</li>
+        <p>EL script elemento se usa para definir JavaScripts del lado del cliente.</p>
+        <li>base</li>
+        <p>El base elemento especifica la URL base y el objetivo base para todas las URL relativas en una página. </p>
+    </ul>
+    <hr>
+
+    <h2>Configuración de la ventana gráfica</h2>
+    <p>HTML5 introdujo un método para permitir a los diseñadores web tomar el control de la ventana gráfica, a través de la etiqueta meta.</p>
+    <p>La ventana gráfica es el área visible del usuario de una página web. Varía según el dispositivo y será más pequeño en un teléfono móvil que en la pantalla de una computadora.</p>
+    <p>Un meta elemento de ventana gráfica proporciona al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página.</p>
+    <p>La parte ancho = ancho del dispositivo establece el ancho de la página para seguir el ancho de la pantalla del dispositivo (que variará según el dispositivo).</p>
+    <p>La parte initial-scale = 1.0 establece el nivel de zoom inicial cuando el navegador carga por primera vez la página.</p>
+    <img src="./img/viewport.PNG" alt="sin y con viewport." width="500" height="500">
+    <hr>
+
+    <h2>Elementos a nivel de bloque</h2>
+    <p>Un elemento de nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como sea posible).</p>
+    <p>Elementos de nivel de bloque en HTML:</p>
+    <ul>
+        <li>address</li>
+        <li>article</li>
+        <li>aside</li>
+        <li>blockquote</li>
+        <li>canvas</li>
+        <li>dd</li>
+        <li>div</li>
+        <li>dl</li>
+        <li>dt</li>
+        <li>fieldset</li>
+        <li>figcaption</li>
+        <li>figure</li>
+        <li>footer</li>
+        <li>form</li>
+        <li>h1-h6</li>
+        <li>header</li>
+        <li>hr</li>
+        <li>li</li>
+        <li>main</li>
+        <li>nav</li>
+        <li>noscript</li>
+        <li>ol</li>
+        <li>p</li>
+        <li>pre</li>
+        <li>section</li>
+        <li>table</li>
+        <li>tfoot</li>
+        <li>ul</li>
+        <li>video</li>
+    </ul>
+    <hr>
+
+    <h2>Elementos en línea</h2>
+    <p>Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho que sea necesario.</p>
+    <ul>
+        <li>a</li>
+        <li>abbr</li>
+        <li>acronym</li>
+        <li>b</li>
+        <li>bdo</li>
+        <li>big</li>
+        <li>br</li>
+        <li>button</li>
+        <li>cite</li>
+        <li>code</li>
+        <li>dfn</li>
+        <li>em</li>
+        <li>i</li>
+        <li>img</li>
+        <li>input</li>
+        <li>kbd</li>
+        <li>label</li>
+        <li>map</li>
+        <li>object</li>
+        <li>output</li>
+        <li>q</li>
+        <li>samp</li>
+        <li>script</li>
+        <li>select</li>
+        <li>small</li>
+        <li>span</li>
+        <li>strong</li>
+        <li>sub</li>
+        <li>sup</li>
+        <li>textarea</li>
+        <li>time</li>
+        <li>tt</li>
+        <li>var</li>
+    </ul>
+    <hr>
+
+    <h2>El elemento div</h2>
+    <p>El div elemento se usa a menudo como contenedor para otros elementos HTML.</p>
+    <div style="background-color: black; color: white; padding: 20px;">
+        <h3>Lorem</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus sit a reprehenderit repellendus quod magni nihil asperiores assumenda ipsam facilis. A facilis amet voluptatum recusandae quam nihil facere nesciunt in!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, praesentium itaque? Perferendis quisquam ipsa suscipit veritatis sint quae dolor placeat provident ipsam, consequatur, officia a natus, aliquid adipisci magnam similique.</p>
+    </div>
+    <hr>
+
+    <h2>El elemento span</h2>
+    <p>El span elemento se usa a menudo como contenedor para algún texto.</p>
+    <h3>Mi encabezado <span style="color: red;">importante</span>.</h3>
+    <hr>
+
+    <h2>Elementos de código de computadora</h2>
+    <code style="color: white;">
+        x = 5;<br>
+        Y = 6;<br>
+        Z = x + y;<br>
+    </code>
+    <p>Tenga en cuenta que no conserva espacios en blanco adicionales y saltos de línea.</p>
+    <p>Para solucionar esto, puede poner el elemento dentro de un elemento pre.</p>
+    <figcaption>Ejemplo de función JavaScript</figcaption>
+    <figure style="background-color: bisque; padding: 10px;">
+        <pre style="background-color: goldenrod; padding: 10px;">
+            <code style="background-color: gray;">
+    function hola(){
+        return "hola"
+    }
+            </code>
+        </pre>
+    </figure>
+    <hr>
+
+    <h2>samp para la salida del programa</h2>
+    <p>Representa la salida de un programa o sistema informático. Generalmente se muestra en una fuente monoespacial.</p>
+    <p>Si ingresa un valor incorrecto, el programa devolverá <samp>¡Error!</samp></p>
+    <hr>
+
+    <h2>kbd para entrada de teclado</h2>
+    <p>Representa la entrada del usuario, como la entrada del teclado o los comandos de voz. Generalmente se muestra en una fuente monoespacial.</p>
+    <p>Para guardar el documento presiona <kbd>ctrl + s</kbd>.</p>
+    <hr>
+
+    <h2>var para variables</h2>
+    <p>La variable podría ser una variable en una expresión matemática o una variable en el contexto de programación.</p>
+    <p><var>E</var> = <var>mc</var><sup>2</sup>.</p>
+    <hr>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diseños</title>
+</head>
+<body>
+    <h1>Diseños</h1>
+    <hr>
+
+    <h2>Elementos de diseño HTML</h2>
+    <p>Los sitios web a menudo muestran contenido en varias columnas (como una revista o periódico). HTML ofrece varios elementos semánticos que definen las diferentes partes de una página web.</p>
+    <img width="500" height="auto" src="./img/semantica.PNG" alt="semantica">
+    <p>Hay cinco formas diferentes de crear diseños de varias columnas. Cada camino tiene sus pros y sus contras.</p>
+    <ol>
+        <li>Tablas HTML (no recomendado).</li>
+        <p>El elemento table no fue diseñado para ser una herramienta de diseño! El propósito del elemento es mostrar datos tabulares. Por lo tanto, ¡no use tablas para el diseño de su página! Traerán un desastre en su código. E imagine lo difícil que será rediseñar su sitio después de un par de meses.</p>
+        <li>Propiedad flotante CSS.</li>
+        <p>Es común hacer diseños web completos utilizando la propiedad flotante CSS. El flotador es fácil de aprender: solo necesita recordar cómo funcionan el flotador y las propiedades claras. Desventajas: los elementos flotantes están vinculados al flujo de documentos, lo que puede dañar la flexibilidad.</p>
+        <li>CSS flexbox.</li>
+        <p>Flexbox es un nuevo modo de diseño en CSS3. El uso de flexbox asegura que los elementos se comporten de manera predecible cuando el diseño de la página debe acomodar diferentes tamaños de pantalla y diferentes dispositivos de visualización. Desventajas: no funciona en IE10 y versiones anteriores.</p>
+        <li>Marco CSS.</li>
+        <li>Rejilla CSS.</li>
+        <p>El Módulo de diseño de cuadrícula CSS ofrece un sistema de diseño basado en cuadrícula, con filas y columnas, lo que facilita el diseño de páginas web sin tener que usar flotantes y posicionamiento. Desventajas: no funciona en IE ni en Edge 15 y versiones anteriores.</p>
+    </ol>
+    <hr>
+
+    <h2>Diseño web sensible</h2>
+    <p>Responsive Web Design se trata de usar HTML y CSS para redimensionar, ocultar, reducir o ampliar automáticamente un sitio web, para que se vea bien en todos los dispositivos (computadoras de escritorio, tabletas y teléfonos). Una página web debería verse bien en cualquier dispositivo.</p>
+    <p>Al crear páginas web receptivas, agregue el meta elemento con el name viewport. Esto establecerá la ventana gráfica de su página, que le dará al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página.</p>
+    <hr>
+
+    <h2>Imágenes receptivas</h2>
+    <p>Las imágenes receptivas son imágenes que se adaptan bien a cualquier tamaño de navegador.Si la width propiedad CSS se establece en 100%, la imagen responderá y se escalará hacia arriba y hacia abajo. La imagen se puede ampliar para que sea más grande que su tamaño original. Una solución mejor, en muchos casos, será utilizar la max-widthpropiedad en su lugar. Si la max-widthpropiedad se establece en 100%, la imagen se reducirá si es necesario, pero nunca se ampliará para ser mayor que su tamaño original.</p>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" style="max-width: 100%; height:auto;">
+    <hr>
+
+    <h2 style="font-size: 10vw;">Tamaño de texto receptivo</h2>
+    <p style="font-size: 5vw;">El tamaño del texto se puede establecer con una unidad "vw", lo que significa el "ancho de la vista". De esa forma, el tamaño del texto seguirá el tamaño de la ventana del navegador. Viewport es el tamaño de la ventana del navegador. 1vw = 1% del ancho de la ventana gráfica. Si la ventana gráfica tiene 50 cm de ancho, 1vw mide 0.5 cm.</p>
+    <hr>
+
+    <h2>Preguntas de los medios</h2>
+    <p>Además de cambiar el tamaño del texto y las imágenes, también es común usar consultas de medios en páginas web receptivas. Con las consultas de medios, puede definir estilos completamente diferentes para diferentes tamaños de navegador.</p>
+    <hr>
+
+    <h2>Diseño web receptivo: marcos</h2>
+    <p>Hay muchos marcos CSS existentes que ofrecen diseño receptivo. Son gratis y fáciles de usar.</p>
+    <p>Una excelente manera de crear un diseño receptivo es utilizar una hoja de estilo receptiva, como W3.CSS</p>
+    <p>Otro marco popular es Bootstrap, usa HTML, CSS y jQuery para crear páginas web receptivas.</p>
+    <hr>
+    
+</body>
+</html>

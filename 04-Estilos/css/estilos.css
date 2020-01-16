@@ -1,0 +1,48 @@
+h2{
+    color:white;
+}
+
+#demo{
+    color:blueviolet;
+}
+
+p.demo{
+    color: orange;
+}
+
+#demo1:link{
+    color: chartreuse;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#demo1:visited{
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#demo1:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#demo1:active{
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#demo2:link, #demo2:visited{
+    background-color: teal;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#demo2:hover, #demo2:active{
+    background-color: turquoise;
+}

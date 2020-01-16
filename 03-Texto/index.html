@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Texto</title>
+    <style>
+        th,
+        td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        li a:hover{
+            background-color: #111111;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Texto</h1>
+    <hr>
+
+    <h2>Encabezados HTML</h2>
+    <p>Los encabezados se definen con las etiquetas h1 a h6.</p>
+    <p>Los motores de búsqueda utilizan los encabezados para indexar la estructura y el contenido de sus páginas web.
+    </p>
+    <p>Cada encabezado HTML tiene un tamaño predeterminado. Sin embargo, puede especificar el tamaño de cualquier
+        encabezado con el style atributo.</p>
+    <h1 style="font-size:60px;">Texto</h1>
+    <hr>
+
+    <h2>Reglas horizontales HTML</h2>
+    <p>La hr etiqueta define un salto temático en una página HTML, y se muestra con mayor frecuencia como una regla
+        horizontal.</p>
+    <hr>
+
+    <h2>Saltos de línea HTML</h2>
+    <p>El br elemento HTML define un salto de línea. üselo si desea un salto de línea (una nueva línea) sin comenzar un
+        nuevo párrafo.</p>
+    <br>
+    <hr>
+
+    <h2>El elemento HTML pre</h2>
+    <p>El pre elemento HTML define texto preformateado. El texto dentro de un pre elemento se muestra en una fuente de
+        ancho fijo (generalmente Courier), y conserva espacios y saltos de línea</p>
+    <pre>
+        Mi Bonnie se encuentra sobre el océano.
+        Mi Bonnie yace sobre el mar.
+        Mi Bonnie se encuentra sobre el océano.
+        oh, traéme mi Bonnie.
+    </pre>
+    <hr>
+
+    <h2>Elementos de formato HTML</h2>
+    <p>HTML también define elementos especiales para definir texto con un significado especial.</p>
+    <ul>
+        <li>b - Texto en negrita</li>
+        <p><b>Texto b</b></p>
+        <li>strong - Texto importante.</li>
+        <p><strong>Texto strong</strong></p>
+        <li>i - Texto en cursiva</li>
+        <p><i>Texto icono</i></p>
+        <li>em - Texto enfatizado</li>
+        <p><em>Texto em</em></p>
+        <li>mark - Texto marcado</li>
+        <p><mark>Texto mark</mark></p>
+        <li>small - Texto pequeño</li>
+        <p><small>Texto small</small></p>
+        <li>del - Texto eliminado</li>
+        <p><del>Texto del</del></p>
+        <li>ins - Texto insertado</li>
+        <p><ins>Texto ins</ins></p>
+        <li>sub y sup - Texto del subíndice y superíndice.</li>
+        <p>Normal <sub>Texto sub </sub><sup>Texto sup</sup></p>
+    </ul>
+    <hr>
+
+    <h2>Elementos de citas y citas HTML</h2>
+    <ul>
+        <li>q para citas cortas</li>
+        <p>Los navegadores generalmente insertan comillas alrededor del elemento.</p>
+        <p><q cite="">Texto q</q></p>
+        <li>El blockquote elemento HTML define una sección que se cita de otra fuente.</li>
+        <p>Los navegadores suelen sangrar el elemento.</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            Durante 50 años, WWF ha estado protegiendo el futuro de la naturaleza. WWF, la organización líder mundial en
+            conservación, trabaja en 100 países y cuenta con el respaldo de 1,2 millones de miembros en los Estados
+            Unidos y cerca de 5 millones a nivel mundial.
+        </blockquote>
+        <li>abbr para abreviaturas</li>
+        <p>El abbr elemento HTML define una abreviatura o un acrónimo.</p>
+        <abbr title="">Texto abbr</abbr><br>
+        <li>addres para información de contacto</li>
+        <p>El address elemento HTML define la información de contacto (autor / propietario) de un documento o artículo.
+            Generalmente se muestra en cursiva. La mayoría de los navegadores agregarán un salto de línea antes y
+            después del elemento.</p>
+        <address>
+            Written by Fredy Simón.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Guatemala, Guatemala.<br>
+        </address>
+        <li>cite para el título del trabajo</li>
+        <p>Los navegadores suelen mostrar cite elementos en cursiva.</p>
+        <p><cite>Texto de cita</cite></p>
+        <li>bdo para anulación bidireccional</li>
+        <p>El bdo elemento se usa para anular la dirección del texto actual</p>
+        <p><bdo dir="rtl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad a aut saepe, aliquam atque
+                voluptate.</bdo></p>
+    </ul>
+    <hr>
+
+    <h2>Enlaces</h2>
+    <p>Los enlaces permiten a los usuarios hacer clic de una página a otra. Los enlaces HTML son hipervínculos. Cuando
+        mueves el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano.</p>
+    <p><b>Nota: </b> Un enlace no tiene que ser texto. Puede ser una imagen o cualquier otro elemento HTML. border:0; se
+        agrega para evitar que IE9 (y versiones anteriores) muestren un borde alrededor de la imagen (cuando la imagen
+        es un enlace).</p>
+    <p>El target atributo especifica dónde abrir el documento vinculado.</p>
+    <p>El title atributo especifica información adicional sobre un elemento. La información se muestra con mayor
+        frecuencia como texto de información sobre herramientas cuando el mouse se mueve sobre el elemento.</p>
+    <a href="https://www.w3schools.com/html/" title="W3Schools">Tutorial HTML</a>
+    <p><a href="./subcarpeta/index.html">Enlace local</a></p>
+    <a href="https://dragonball.sullca.com/capitulos/dragon-ball-super-latino/13320"><img
+            src="https://i.pinimg.com/originals/29/bb/5d/29bb5df8fd05cca2854db5cc524ef5f3.png" alt="esfera" width="20"
+            height="20" style="border: 0;"></a>
+    <p>Los marcadores HTML se utilizan para permitir a los lectores saltar a partes específicas de una página web.</p>
+    <p><a href="./subcarpeta/index.html#cap3" target="_blank">Destino - Capitulo 3 en nueva pestaña. </a></p>
+    <hr>
+
+    <h2>Otros textos</h2>
+    <p><dfn>Definición </dfn><code>Codigo </code><data value="">Texto data </data></p>
+    <p><wbr>Texto wbr </wbr><span>Texto span </span> <u>Texto u </u></p>
+    <p><time>1072</time></p>
+    <p>Parrafo <span>span 1</span> <span>span 2</span></p>
+    <hr>
+
+    <h2>Listas</h2>
+    <p>Una lista desordenada comienza con la etiqueta ul. Una lista ordenada comienza con la etiqueta ol. Cada elemento
+        de la lista comienza con la etiqueta li.</p>
+    <p>La list-style-type propiedad CSS se utiliza para definir el estilo del marcador del elemento de la lista
+        desordenada.</p>
+    <table style="border-collapse:collapse; width: 100%;">
+        <caption>Valores posibles:</caption>
+        <thead>
+            <tr>
+                <th>Valor</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>disc</td>
+                <td>Establece el marcador del elemento de la lista en una viñeta (predeterminado).</td>
+            </tr>
+            <tr>
+                <td>circle</td>
+                <td>Establece el marcador del elemento de la lista en un círculo.</td>
+            </tr>
+            <tr>
+                <td>square</td>
+                <td>Establece el marcador del elemento de la lista en un cuadrado</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>Los elementos de la lista no se marcarán.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>El type atributo de la etiqueta, define el tipo de marcador de elemento de lista ordenada.</p>
+    <table style="border-collapse:collapse; width: 100%;">
+        <caption>Valores posibles:</caption>
+        <thead>
+            <tr>
+                <th>Valor</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>type="1"</td>
+                <td>Los elementos de la lista estarán numerados con números (predeterminado).</td>
+            </tr>
+            <tr>
+                <td>type="A"</td>
+                <td>Los elementos de la lista estarán numerados con letras mayúsculas.</td>
+            </tr>
+            <tr>
+                <td>type="a"</td>
+                <td>Los elementos de la lista estarán numerados con letras minúsculas.</td>
+            </tr>
+            <tr>
+                <td>type="I"</td>
+                <td>Los elementos de la lista estarán numerados con números romanos en mayúscula.</td>
+            </tr>
+            <tr>
+                <td>type="i"</td>
+                <td>Los elementos de la lista estarán numerados con números romanos en minúsculas.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>La lista se puede anidar (listas dentro de listas). Los elementos de la lista pueden contener una nueva lista y otros elementos HTML, como imágenes y enlaces, etc.</p>
+    <p>Por defecto, una lista ordenada comenzará a contar desde 1. Si desea comenzar a contar desde un número especificado, puede usar el startatributo.</p>
+    <p>Ingredientes de mis platos favoritos:</p>
+    <ul style="list-style-type: square;">
+        <li>Tallarin</li>
+        <ol type="I" start="3">
+            <li>Fideos</li>
+            <li>Carne</li>
+        </ol>
+        <li>Arroz</li>
+        <ol type="A">
+            <li>Arroz</li>
+            <li>carne</li>
+        </ol>
+        <li>arroz chaufa</li>
+        <ol start="50">
+            <li>Arroz</li>
+            <li>Carne</li>
+        </ol>
+    </ul>
+    <hr>
+
+    <h2>Listas de descripción</h2>
+    <p>Una lista de descripción es una lista de términos, con una descripción de cada término.</p>
+    <p>La dl etiqueta define la lista de descripción, la dt etiqueta define el término (nombre) y la etiqueta dd describe cada término</p>
+    <p>Lista de capitales de latinoamerica</p>
+    <dl>
+        <dt>Perú</dt>
+        <dd>-Lima</dd>
+        <dt>Guatemala</dt>
+        <dd>-Guatemala</dd>
+        <dt>Brasil</dt>
+        <dd>-Brasilia</dd>
+        <dt>Colombia</dt>
+        <dd>-Bogotá</dd>
+    </dl>
+    <hr>
+
+    <h2>Lista horizontal</h2>
+    <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+        <li style="float: left;"><a href="#" style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">Home</a></li>
+        <li style="float: left;"><a href="#" style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">News</a></li>
+        <li style="float: left;"><a href="#" style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">Contact</a></li>
+        <li style="float: left;"><a href="#" style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">About</a></li>
+    </ul>
+    <hr>
+
+</body>
+
+</html>

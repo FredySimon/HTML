@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <hr>
+
+    <p>JavaScript hace que las páginas HTML sean más dinámicas e interactivas.</p>
+    <p id="demo"></p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">Mostrar fecha</button>
+    <hr>
+
+    <h2>La etiqueta HTML script</h2>
+    <p>La script etiqueta se usa para definir un script del lado del cliente (JavaScript). Contiene declaraciones de script o apunta a un archivo de script externo a través del src atributo.</p>
+    <p>Los usos comunes de JavaScript son la manipulación de imágenes, la validación de formularios y los cambios dinámicos de contenido.</p>
+    <p id="demo1"></p>
+    <script>
+    document.getElementById("demo1").innerHTML="Hola";
+    </script>
+    <hr>
+
+    <h2>JavaScript puede cambiar los estilos HTML</h2>
+    <p id="demo2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, reiciendis minus. Id nisi perferendis exercitationem ut excepturi. Odit dolorem sapiente tenetur quod enim doloremque maxime, culpa obcaecati nobis ut amet.</p>
+    <button onclick="funcion()">Cambiar estilo.</button>
+    <script>
+        function funcion(){
+            var x = document.getElementById("demo2").style;
+            x.fontSize ="25px";
+            x.color = "red";
+            x.backgroundColor = "yellow"
+        }
+    </script>
+    <hr>
+
+    <h2>JavaScript puede cambiar los atributos HTML</h2>
+    <img src="./img/Apagada.PNG" alt="Bombilla" width="200" height="300" id="demo3">
+    <button type="button" onclick="funcion1('Encender')">Encender</button>
+    <button type="button" onclick="funcion1('Apagar')">Apagar</button>
+    <script>
+    function funcion1(estado){
+        var imagen;
+        if(estado == 'Encender'){
+            imagen = "./img/Encendida.PNG";
+        } else if(estado == 'Apagar') {
+            imagen = "./img/Apagada.PNG";
+        }
+        document.getElementById('demo3').src=imagen;
+    }
+    </script>
+    <hr>
+
+    <h2>La etiqueta HTML noscript</h2>
+    <p>La noscript etiqueta se utiliza para proporcionar un contenido alternativo para los usuarios que han deshabilitado los scripts en su navegador o tienen un navegador que no admite scripts del lado del cliente.</p>
+    <noscript>Lo sentimos, tu navegador no soparta JavaScript.</noscript>
+    <hr>
+
+    <!-- console.dir($0) propiedades y metodos -->
+    
+</body>
+</html>

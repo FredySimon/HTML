@@ -1,8 +1,5 @@
-td{
-  border: 1px solid #ccc;
-}
-
-table{
+table#demo{  
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -14,4 +11,16 @@ th{
 td,th {
   text-align: center;
   padding: 0.5em;
+  border: 1px solid black;
+}
+
+tr:nth-child(even){
+  background-color: #dddddd;
+}
+
+table#demo1{
+  width:100%; 
+  border-spacing:15px; 
+  border: 1px solid black; 
+  padding: 5px;
 }

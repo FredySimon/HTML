@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5</title>
+    <style>
+    *{
+            box-sizing: border-box;
+    }
+    miEtiqueta{
+        display: block;
+        background-color: #dddddd;
+        padding: 50px;
+        font-size: 30px;
+        color: chartreuse;
+    }
+    
+    table{
+        border-collapse: collapse;
+    }
+    td,th{
+        border: 2px solid black;
+        padding: 8px;
+    }
+
+    nav a:hover{
+        background-color: mediumspringgreen;
+    }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <h1>HTML5</h1>
+    <hr>
+
+    <h2>¿Qué hay de nuevo en HTML5?</h2>
+    <ul>
+        <li>La declaración DOCTYPE.</li>
+        <li>La declaración de codificación de caracteres (charset). La codificación de caracteres predeterminada en HTML5 es UTF-8.</li>
+        <li>Nuevos elementos semánticos como header, footer, article, y section. Nuevos atributos de elementos de formulario como número, fecha, hora, calendario y rango. Nuevos elementos gráficos svg y canvas. Nuevos elementos multimedia audio y video.</li>
+        <li>Las nuevas API más interesantes en HTML5 son:</li>
+        <ul>
+            <li>Geolocalización HTML</li>
+            <li>Arrastrar y soltar HTML</li>
+            <li>Almacenamiento local HTML es un poderoso reemplazo para las cookies.</li>
+            <li>Caché de aplicaciones HTML</li>
+            <li>Trabajadores web HTML</li>
+            <li>HTML SSE</li>
+        </ul>
+    </ul>
+    <hr>
+
+    <h2>Agregar nuevos elementos a HTML</h2>
+    <p>También puede agregar nuevos elementos a una página HTML con un truco del navegador.</p>
+    <p>La declaración de JavaScript document.createElement("myHero")es necesaria para crear un nuevo elemento en IE 9 y versiones anteriores.</p>
+    <miEtiqueta>Elemento nuevo.</miEtiqueta>
+    <hr>
+
+    <h2>HTML5Shiv</h2>
+    <p>Se coloca dentro de la etiqueta head. HTML5Shiv es un archivo javascript al que se hace referencia en una etiqueta script. Por lo tanto, HTML5Shiv es una solución alternativa de JavaScript para permitir el diseño de elementos HTML5 en versiones de Internet Explorer anteriores a la versión 9.</p>
+    <p>Se debe utilizar la HTML5Shiv cuando está usando los nuevos elementos HTML5 como: article, section, aside, nav, footer.</p>
+    <p><a href="https://github.com/aFarkas/html5shiv">Descargar</a></p>
+    <p><a href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">Referencia CDN</a></p>
+    <p>El script HTML5Shiv debe colocarse en el head elemento, después de cualquier hoja de estilo.</p>
+    <hr>
+
+    <h2>Nuevos elementos</h2>
+    <p>A continuación se muestra una lista de los nuevos elementos HTML5 y una descripción de para qué se utilizan.</p>
+    <br>
+    <p>HTML5 ofrece nuevos elementos para una mejor estructura de documentos:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descripcion</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>article</td>
+                <td>Define un artículo en un documento. Especifica contenido independiente y autónomo. Un artículo debe tener sentido por sí solo, y debería ser posible leerlo independientemente del resto del sitio web. Ejemplos:</td>
+                <ul>
+                    <li>Publicación del foro.</li>
+                    <li>Entrada en el blog.</li>
+                    <li>Artículo de periódico.</li>
+                </ul>
+                <td>
+                    <article style="background-color: lightskyblue;" >
+                        <h4>Titulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore, delectus optio obcaecati impedit autem laborum, dolor accusantium exercitationem dignissimos odio excepturi eum. Ab fugiat officia quas quisquam ad dicta.</p>
+                    </article>
+                </td>
+            </tr>
+            <tr>
+                <td>aside</td>
+                <td>Define el contenido aparte del contenido de la página. En el pueden ir los anuncios.</td>
+                <td>
+                    <aside>
+                        <h6>Titulo</h6>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugiat nihil hic excepturi autem cum quas itaque consectetur quibusdam neque! Quos ipsa culpa adipisci distinctio laudantium eius porro hic unde.</p>
+                    </aside>
+                </td>
+            </tr>
+            <tr>
+                <td>bdi</td>
+                <td>Aísla una parte del texto que podría estar formateada en una dirección diferente de otro texto fuera de él.</td>
+            </tr>
+            <tr>
+                <td>details</td>
+                <td>Define detalles adicionales que el usuario puede ver u ocultar.</td>
+            </tr>
+            <tr>
+                <td>dialog</td>
+                <td>Define un cuadro de diálogo o ventana.</td>
+            </tr>
+            <tr>
+                <td>figcaption</td>
+                <td>Define un título para un elemento figure.</td>
+            </tr>
+            <tr>
+                <td>figure</td>
+                <td>Define contenido autónomo. En HTML5, una imagen y un título pueden agruparse en un figure elemento</td>
+                <td>
+                    <figure>
+                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="casa" style="width: 200px;">
+                        <figcaption>Figura 1 - Casa.</figcaption>
+                    </figure>
+                </td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>Define un pie de página para un documento o sección. Debe contener información sobre su elemento contenedor. Un pie de página generalmente contiene el autor del documento, información de copyright, enlaces a los términos de uso, información de contacto, etc. Puede tener varios footer elementos en un documento.</td>
+                <td>
+                    <section style="background-color: lightseagreen;">
+                        <h4>Titulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur quos eos sint! Exercitationem voluptatibus, eius minima commodi est eum delectus, rem assumenda dignissimos corporis ab, pariatur esse quibusdam harum.</p>
+                        <footer style="background-color: lightgreen;">
+                            <p>Creado por: </p>
+                            <p>Información de contacto: <a href="fjsimon__8@outlook.com">fjsimon__8@outlook.com"</a>.</p>
+                        </footer>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>header</td>
+                <td>Define un encabezado para un documento o sección. Elemento debe usarse como contenedor para contenido introductorio. Puede tener varios header elementos en un documento.</td>
+                <td>
+                    <article style="background-color: darkgrey;">
+                        <header style="background-color: chartreuse; padding: 3px;">
+                            <h4>Titulo</h4>
+                            <h6>Subtitulo</h6>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptates, temporibus dignissimos dicta id nobis placeat fugit vitae animi tempore consequatur sint commodi illum alias hic fuga aperiam ducimus unde!</p>
+                    </article>
+                </td>
+            </tr>
+            <tr>
+                <td>main</td>
+                <td>Define el contenido principal de un documento.</td>
+            </tr>
+            <tr>
+                <td>mark</td>
+                <td>Define texto marcado / resaltado.</td>
+            </tr>
+            <tr>
+                <td>meter</td>
+                <td>Define una medición escalar dentro de un rango conocido (un medidor).</td>
+            </tr>
+            <tr>
+                <td>nav</td>
+                <td>Define enlaces de navegación. Tenga en cuenta que NO todos los enlaces de un documento deben estar dentro de un nav elemento. El nav elemento está destinado solo para el bloque principal de enlaces de navegación.</td>
+                <td>
+                    <nav style="background-color:mediumaquamarine; padding: 5px;">
+                        <a href="https://github.com/FredySimon/HTML">HTML</a> |
+                        <a href="https://github.com/FredySimon/CSS">CSS</a> |
+                        <a href="https://github.com/FredySimon/JavaScript">JavaScript</a> |
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td>progress</td>
+                <td>Representa el progreso de una tarea.</td>
+            </tr>
+            <tr>
+                <td>rp</td>
+                <td>Define qué mostrar en los navegadores que no admiten anotaciones ruby.</td>
+            </tr>
+            <tr>
+                <td>rt</td>
+                <td>Define una explicación / pronunciación de los caracteres (para la tipografía de Asia oriental).</td>
+            </tr>
+            <tr>
+                <td>ruby</td>
+                <td>Define una anotación en rubí (para la tipografía de Asia oriental).</td>
+            </tr>
+            <tr>
+                <td>section</td>
+                <td>Define una sección en un documento. Según la documentación HTML5 del W3C: "Una sección es una agrupación temática de contenido, generalmente con un encabezado". Una página de inicio normalmente se puede dividir en secciones para introducción, contenido e información de contacto.</td>
+                <td>
+                    <section style="background-color: darkgrey;">
+                        <h4>titulo</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque dignissimos officia excepturi? Maxime voluptate perspiciatis fugiat architecto nulla nostrum consequatur velit quam ut explicabo, culpa incidunt cumque officiis saepe praesentium.</p>
+                    </section>
+                    <section style="background-color: lightgray;">
+                        <h4>Titulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, asperiores impedit a consequatur modi dolore soluta consequuntur facere quia fuga rerum ipsa veniam, dolor natus distinctio, repellat obcaecati necessitatibus repellendus!</p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>Define un encabezado visible para un elemento details.</td>
+            </tr>
+            <tr>
+                <td>time</td>
+                <td>Define una fecha/hora.</td>
+            </tr>
+            <tr>
+                <td>wbr</td>
+                <td>Define un posible salto de línea.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p>Nuevos elementos de formulario:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>datalist</td>
+                <td>Especifica una lista de opciones predefinidas para controles de entrada.</td>
+            </tr>
+            <tr>
+                <td>output</td>
+                <td>Define el resultado de un cálculo.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p>Nuevas Entradas:</p>
+    <div>
+        <div style="float:left; width: 50%; background-color: lightgray; border: 1px solid black; height: 367px;">
+            <p style="margin-left: 20px;">Tipos:</p>
+            <ul>
+                <li>color</li>
+                <li>fecha</li>
+                <li>fecha y hora</li>
+                <li>datetime-local</li>
+                <li>correo electrónico</li>
+                <li>mes</li>
+                <li>número</li>
+                <li>distancia</li>
+                <li>buscar</li>
+                <li>tel</li>
+                <li>hora</li>
+                <li>url</li>
+                <li>semana</li>
+            </ul>
+        </div>
+        <div style="float:left; width: 50%; background-color: lightgray; border: 1px solid black;">
+            <p style="margin-left: 20px;">Atributos:</p>
+            <ul>
+                <li>autocompletar</li>
+                <li>enfoque automático</li>
+                <li>formar</li>
+                <li>formacion</li>
+                <li>formenctype</li>
+                <li>método de forma</li>
+                <li>formnovalidate</li>
+                <li>Formtarget</li>
+                <li>alto y ancho</li>
+                <li>lista</li>
+                <li>min y max</li>
+                <li>múltiple</li>
+                <li>patrón (regexp)</li>
+                <li>marcador de posición</li>
+                <li>necesario</li>
+                <li>paso</li>
+            </ul>
+        </div>
+    </div>
+    <hr><hr>
+
+    <h2>Nueva sintaxis de atributo</h2>
+    <p>HTML5 permite cuatro sintaxis diferentes para los atributos.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>vacio/empty</td>
+                <td>disabled</td>
+            </tr>
+            <tr>
+                <td>No cotizado/Unquoted</td>
+                <td>value=John</td>
+            </tr>
+            <tr>
+                <td>Doble cita/Double-quoted</td>
+                <td>value="John"</td>
+            </tr>
+            <tr>
+                <td>Comillas simples/Single-quoted</td>
+                <td>value='John'</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Gráficos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>canvas</td>
+                <td>Dibuje gráficos, sobre la marcha, a través de secuencias de comandos (generalmente JavaScript).</td>
+            </tr>
+            <tr>
+                <td>svg</td>
+                <td>Dibujar gráficos vectoriales escalables.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Nuevos elementos multimedia</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descricpción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>audio</td>
+                <td>Define contenido sonoro.</td>
+            </tr>
+            <tr>
+                <td>embed</td>
+                <td>Define un contenedor para una aplicación externa (no HTML).</td>
+            </tr>
+            <tr>
+                <td>source</td>
+                <td>Define múltiples recursos multimedia para elementos multimedia (video y audio).</td>
+            </tr>
+            <tr>
+                <td>track</td>
+                <td>Define pistas de texto para elementos multimedia (video y audio).</td>
+            </tr>
+            <tr>
+                <td>video</td>
+                <td>Define video o película.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Elementos Semánticos HTML5</h2>
+    <p>La semántica es el estudio de los significados de palabras y frases en un idioma. Elementos semánticos = elementos con un significado.</p>
+    <h3>¿Qué son los elementos semánticos?</h3>
+    <p>Un elemento semántico describe claramente su significado tanto para el navegador como para el desarrollador. Ejemplos de elementos no semánticos : div y span - No dice nada sobre su contenido. Ejemplos de semánticas elementos: form, table y article - define claramente su contenido.</p>
+    <p>Los elementos semánticos HTML5 son compatibles con todos los navegadores modernos. Además, puede "enseñar" a los navegadores antiguos cómo manejar "elementos desconocidos".</p>
+    <h3>¿Anidando artículo en sección o viceversa?</h3>
+    <p>El article elemento especifica contenido independiente y autónomo. El section elemento define la sección en un documento. ¿Podemos usar las definiciones para decidir cómo anidar esos elementos? ¡No podemos! Entonces, en Internet, encontrará páginas HTML con section elementos que contienen article elementos y article elementos que contienen section elementos. También encontrará páginas con section elementos que contienen section elementos y article elementos que contienen article elementos.</p>
+    <h3>¿Por qué elementos semánticos?</h3>
+    <p>Con HTML4, los desarrolladores usaron sus propios nombres de identificación / clase para diseñar elementos: encabezado, parte superior, inferior, pie de página, menú, navegación, principal, contenedor, contenido, artículo, barra lateral, topnav, etc. Esto hizo imposible que los motores de búsqueda identificaran el contenido correcto de la página web. Con los nuevos elementos HTML5 (header, footer, nav, section,article), esto será más fácil.</p>
+    <hr>
+
+    <h2>Migración de HTML4 a HTML5</h2>
+    <figure style="align-content: center;">
+        <img src="./img/Migrar.PNG" alt="migrar" width="500px">
+    </figure>
+    <hr>
+
+    <h2>La diferencia entre artículo sección y div</h2>
+    <p>El article elemento se define como un bloque completo e independiente de elementos relacionados.</p>
+    <p>El section elemento se define como un bloque de elementos relacionados.</p>
+    <p>El div elemento se define como un bloque de elementos secundarios.</p>
+    <hr>
+
+    <h2>Convenciones de codificación HTML</h2>
+    <p>Los desarrolladores web a menudo no están seguros sobre el estilo de codificación y la sintaxis para usar en HTML. Entre 2000 y 2010, muchos desarrolladores web se convirtieron de HTML a XHTML. Con XHTML, los desarrolladores se vieron obligados a escribir código válido y "bien formado". HTML5 es un poco más descuidado cuando se trata de validación de código.</p>
+    <ul>
+        <li>Usar el tipo de documento correcto</li>
+        <li>Use nombres de elementos en minúscula</li>
+        <li>Cerrar todos los elementos HTML</li>
+        <li>Cerrar elementos HTML vacíos</li>
+        <li>Utilice nombres de atributo en minúsculas</li>
+        <li>Valores de atributos de cotización</li>
+        <li>Atributos de imagen</li>
+        <li>Espacios y signos iguales</li>
+        <li>Evite largas líneas de código</li>
+        <li>Líneas en blanco e indentación</li>
+    </ul>
+    <hr>
+
+</body>
+</html>

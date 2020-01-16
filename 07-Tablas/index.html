@@ -1,62 +1,138 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
 
-    <table>
-      <caption>Tablas</caption>
-      <colgroup>
-        <col span="4">
-        <col style="background: yellow">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miercoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-        </tr>
-      </thead>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
 
-<tbody>
-  <tr>
-    <td>HTML</td>
-    <td>PHP</td>
-    <td>JS</td>
-    <td>Python</td>
-    <td>CSS</td>
-  </tr>
+<body>
+  <h1>Tablas</h1>
+  <hr>
 
-  <tr>
-    <td rowspan="2">JAVA</td>
-    <td>SQL</td>
-    <td>Algoritmos</td>
-    <td rowspan="2">Angular</td>
-    <td>PWA</td>
-  </tr>
+  <p>Una tabla HTML se define con la etiqueta table. Cada fila de la tabla se define con la etiqueta tr. Un encabezado de tabla se define con la etiqueta th. Por defecto, los encabezados de las tablas están en negrita y centrados. Una tabla de datos / celda se define con la etiqueta td.</p>
+  <p>Los <td>elementos son los contenedores de datos de la tabla. Pueden contener todo tipo de elementos HTML; texto, imágenes, listas, otras tablas, etc.</p>
+  <p>Si no especifica un borde para la tabla, se mostrará sin bordes. Si desea que los bordes se contraigan en un borde, agregue la border-collapse propiedad CSS. El relleno de celda especifica el espacio entre el contenido de la celda y sus bordes. Si no especifica un relleno, las celdas de la tabla se mostrarán sin relleno.</p>
+  <p>Para hacer que una celda abarque más de una columna, use el colspan atributo. Para hacer que una celda abarque más de una fila, use el rowspanatributo</p>
+  <p>Para agregar un título a una tabla, use la caption etiqueta.</p>
+  <table id="demo">
+    <caption>Horario</caption>
+    <colgroup>
+      <col span="4">
+      <col style="background: yellow">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>PHP</td>
+        <td>JS</td>
+        <td>Python</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td rowspan="2">JAVA</td>
+        <td>SQL</td>
+        <td>Algoritmos</td>
+        <td rowspan="2">Angular</td>
+        <td>PWA</td>
+      </tr>
+      <tr>
+        <td>Go</td>
+        <td>JS</td>
+        <td>Big Data</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="text-align:right">Total</td>
+        <td>1000</td>
+      </tr>
+    </tfoot>
+  </table>
+  <hr>
 
-  <tr>
+  <h2>Agregar espacio de borde</h2>
+  <p>El espacio entre bordes especifica el espacio entre las celdas. Para establecer el espacio entre bordes para una tabla, use la border-spacing propiedad CSS. Si la tabla tiene bordes colapsados, no tiene efecto.</p>
+  <table id="demo1">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>80</td>
+    </tr>
+  </table>
+  <hr>
 
-    <td>Go</td>
-    <td>JS</td>
-    <td>Big Data</td>
+  <h2>Un estilo especial</h2>
+  <p>Para definir un estilo especial para una tabla especial, agregue un id atributo a la tabla.</p>
+  <hr>
 
-  </tr>
-</tbody>
+</body>
 
-<tfoot>
-  <tr>
-    <td colspan="4" style="text-align:right">Total</td>
-    <td>1000</td>
-  </tr>
-</tfoot>
-
-    </table>
-
-  </body>
 </html>

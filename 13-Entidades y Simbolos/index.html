@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Entidades y Simbolos</title>
+    <style>
+    table{
+        border-collapse: collapse;
+    }
+    td,th{
+        border: 2px solid black;
+        padding: 8px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Entidades y Simbolos</h1>
+    <hr>
+
+    <h2>Entidades</h2>
+    <p>Los caracteres reservados en HTML deben reemplazarse por entidades de caracteres. Los caracteres que no están presentes en su teclado también pueden ser reemplazados por entidades.</p>
+    <p>Si utiliza los signos menor que (<) o mayor que (>) en su texto, el navegador podría mezclarlos con etiquetas.</p>
+    <p>Las entidades de caracteres se utilizan para mostrar caracteres reservados en HTML.</p>
+    <p>Una entidad de personaje se ve así:</p>
+    <pre style="border: 1px solid #e5e5e5; border-left: 3px solid green;">
+        <code >
+    &entity_name;
+    OR
+    &entity_number;
+        </code>
+    </pre>
+    <p>Para mostrar un signo menor que (<) debemos escribir: & lt; o & # 60;</p>
+    &lt; o &#60;
+    <p>Ventaja de usar un nombre de entidad: un nombre de entidad es fácil de recordar. Desventaja de usar un nombre de entidad: los navegadores pueden no admitir todos los nombres de entidades, pero la compatibilidad con los números es buena.</p>
+    <hr>
+
+    <h2>Espacio irrompible</h2>
+    <p>Una entidad de caracteres común utilizada en HTML es el espacio sin interrupciones: & nbsp; Un espacio sin interrupción es un espacio que no se dividirá en una nueva línea.</p>
+    &nbsp;
+    <p>Dos palabras separadas por un espacio que no se rompe se unirán (no se romperán en una nueva línea). Esto es útil cuando romper las palabras puede ser perjudicial.</p>
+    <p>Si escribe 10 espacios en su texto, el navegador eliminará 9 de ellos. Para agregar espacios reales a su texto, puede usar el & nbsp; entidad de personaje.</p>
+    <p>El guión que no se rompe ( & # 8209; ) le permite usar un carácter de guión (-) que no se rompe.</p>
+    &#8209;
+    <hr>
+
+    <h2>Algunas otras entidades de caracteres HTML útiles</h2>
+    <p>Los nombres de las entidades distinguen entre mayúsculas y minúsculas.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Resultado</th>
+                <th>Descripción</th>
+                <th>Entity Name</th>
+                <th>Entity Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>&nbsp; y &#160;</th>
+                <th>espacio irrompible</th>
+                <th>"& + nbsp + ;"</th>
+                <th>"& + # + 160 + ;</th>
+            </tr>
+            <tr>
+                <th>&lt; y &#60;</th>
+                <th>menor que</th>
+                <th>"& + lt"</th>
+                <th>"& + # + 60 + ;"</th>
+            </tr>
+            <tr>
+                <th>&gt; y &#62;</th>
+                <th>mayor que</th>
+                <th>"& + gt + ;"</th>
+                <th>"& + # + 62 + ;"</th>
+            </tr>
+            <tr>
+                <th>&amp; y &#38;</th>
+                <th>ampersand</th>
+                <th>"& + amp + ;"</th>
+                <th>"& + # + 38 + ;"</th>
+            </tr>
+            <tr>
+                <th>&quot; y &#34;</th>
+                <th>comillas dobles</th>
+                <th>"& + quot + ;"</th>
+                <th>"& + # + 34 + ;"</th>
+            </tr>
+            <tr>
+                <th>&apos; y &#39;</th>
+                <th>comillas simples (apóstrofe)</th>
+                <th>"& + apos + ;"</th>
+                <th>"& + # + 39 + ;"</th>
+            </tr>
+            <tr>
+                <th>&cent; y &#162;</th>
+                <th>centavo</th>
+                <th>"& + cent + ;"</th>
+                <th>"& + # + 162 + ;"</th>
+            </tr>
+            <tr>
+                <th>&pound; y &#163;</th>
+                <th>libra</th>
+                <th>"& + pound + ;"</th>
+                <th>"& + # + pound + ;"</th>
+            </tr>
+            <tr>
+                <th>&yen; y &#165;</th>
+                <th>yen</th>
+                <th>"& + yen + ;"</th>
+                <th>"& + # + 165 + ;"</th>
+            </tr>
+            <tr>
+                <th>&euro; y &#8364;</th>
+                <th>euro</th>
+                <th>"& + euro + ;"</th>
+                <th>"& + # + 8364 + ;"</th>
+            </tr>
+            <tr>
+                <th>&copy; y &#169;</th>
+                <th>copyright</th>
+                <th>"& + copy + ;"</th>
+                <th>"& + # + 169 + ;"</th>
+            </tr>
+            <tr>
+                <th>&reg; y &#174;</th>
+                <th>marca registrada</th>
+                <th>"& + reg + ;"</th>
+                <th>"& + # + 174 + ;"</th>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Combinando marcas diacríticas</h2>
+    <p>Una marca diacrítica es un "glifo" agregado a una letra. Algunas marcas diacríticas, como graves (̀) y agudas (́) se llaman acentos.</p>
+    <p>Las marcas diacríticas pueden aparecer tanto encima como debajo de una letra, dentro de una letra y entre dos letras.</p>
+    <p>Las marcas diacríticas se pueden usar en combinación con caracteres alfanuméricos para producir un carácter que no está presente en el conjunto de caracteres (codificación) utilizado en la página.</p>
+    <table>
+        <caption>Ejemplos:</caption>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Caracter</th>
+                <th>Constructor</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>&#768;</th>
+                <th>a</th>
+                <th>"a + & + # + 768 + ;"</th>
+                <th>a&#768;</th>
+            </tr>
+            <tr>
+                <th>&#769;</th>
+                <th>a</th>
+                <th>"a + & + # + 769 + ;"</th>
+                <th>a&#769;</th>
+            </tr>
+            <tr>
+                <th>&#770;</th>
+                <th>a</th>
+                <th>"a + & + # + 770 + ;"</th>
+                <th>a&#770;</th>
+            </tr>
+            <tr>
+                <th>&#771;</th>
+                <th>a</th>
+                <th>"a + & + # + 771 + ;"</th>
+                <th>a&#771;</th>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Simbolos</h2>
+    <p>Si no existe un nombre de entidad, puede usar un número de entidad, una referencia decimal o hexadecimal.</p>
+    <p>&#x20AC;</p>
+    <hr>
+
+    <h2>Algunos símbolos matemáticos compatibles con HTML</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Caracter</th>
+                <th>Numero</th>
+                <th>Entity</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&forall; y &#8704;</td>
+                <td>"& + # + 8704 + ;"</td>
+                <td>"& + forall + ;"</td>
+                <td>PARA TODOS</td>
+            </tr>
+            <tr>
+                <td>&part; y &#8706;</td>
+                <td>"& + # + 8706 + ;"</td>
+                <td>"& + part + ;"</td>
+                <td>DIFERENCIAL PARCIAL</td>
+            </tr>
+            <tr>
+                <td>&exist; y &#8707;</td>
+                <td>"& + # + 8707 + ;"</td>
+                <td>"& + exist + ;"</td>
+                <td>EXISTE</td>
+            </tr>
+            <tr>
+                <td>&#8709; y &empty;</td>
+                <td>"& + # + 8709 + ;"</td>
+                <td>"& + empty + ;"</td>
+                <td>CONJUNTOS VACÍOS</td>
+            </tr>
+            <tr>
+                <td>&nabla; y &#8711;</td>
+                <td>"& + # + 8711 + ;"</td>
+                <td>"& + nabla + ;"</td>
+                <td>NABLA</td>
+            </tr>
+            <tr>
+                <td>&isin; y &#8712;</td>
+                <td>"& + # + 8712 + ;"</td>
+                <td>"& + isin + ;"</td>
+                <td>ELEMTO DE</td>
+            </tr>
+            <tr>
+                <td>&notin; y &#8713;</td>
+                <td>"& + # + 8713 + ;"</td>
+                <td>"& + notin + ;"</td>
+                <td>NO ES ELEMENTO DE</td>
+            </tr>
+            <tr>
+                <td>&ni; y &#8715;</td>
+                <td>"& + # + 8715 + ;"</td>
+                <td>"& + ni + ;"</td>
+                <td>CONTIENE COMO MIEMBRO</td>
+            </tr>
+            <tr>
+                <td>&prod; y &#8719;</td>
+                <td>"& + # + 8719 + ;"</td>
+                <td>"& + prod + ;"</td>
+                <td>PRODUCTO N-ARY</td>
+            </tr>
+            <tr>
+                <td>&sum; y &#8721;</td>
+                <td>"& + # + 8721 + ;"</td>
+                <td>"& + sum + ;"</td>
+                <td>N-ARY SUMMATION</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Algunas letras griegas compatibles con HTML</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Caracter</th>
+                <th>Numero</th>
+                <th>Entity</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&Alpha; y &#913;</td>
+                <td>"& + # + 913 + ;"</td>
+                <td>"& + Alpha + ;"</td>
+                <td>LETRA DE CAPITAL GRIEGO ALFA</td>
+            </tr>
+            <tr>
+                <td>&Beta; y &#914;</td>
+                <td>"& + # + 914 + ;"</td>
+                <td>"& + Beta + ;"</td>
+                <td>Letra mayúscula griega beta</td>
+            </tr>
+            <tr>
+                <td>&Gamma; y &#915;</td>
+                <td>"& + # + 915 + ;"</td>
+                <td>"& + Gamma + ;"</td>
+                <td>LETRA DE CAPITAL GRIEGO GAMMA</td>
+            </tr>
+            <tr>
+                <td>&Delta; y &#916;</td>
+                <td>"& + # + 916 + ;"</td>
+                <td>"& + Delta + ;"</td>
+                <td>DELTA DE LETRAS DE CAPITAL GRIEGO</td>
+            </tr>
+            <tr>
+                <td>&Epsilon; y &#917;</td>
+                <td>"& + # + 917 + ;"</td>
+                <td>"& + Epsilon + ;"</td>
+                <td>LETRA CAPITAL GRIEGA EPSILON</td>
+            </tr>
+            <tr>
+                <td>&Zeta; y &#918;</td>
+                <td>"& + # + 918 + ;"</td>
+                <td>"& + Zeta + ;"</td>
+                <td>Letra mayúscula griega ZETA</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Algunas otras entidades compatibles con HTML</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Caracter</th>
+                <th>Numero</th>
+                <th>Entity</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&trade; y &#8482</td>
+                <td>"& + # + 8482 + ;"</td>
+                <td>"& + trade + ;"</td>
+                <td>MARCA</td>
+            </tr>
+            <tr>
+                <td>&larr; y &#8592;</td>
+                <td>"& + # + 8592 + ;"</td>
+                <td>"& + larr + ;"</td>
+                <td>FLECHA IZQUIERDA</td>
+            </tr>
+            <tr>
+                <td>&#8593; y &uarr;</td>
+                <td>"& + # + 8593 + ;"</td>
+                <td>"& + uarr + ;"</td>
+                <td>FLECHA HACIA ARRIBA</td>
+            </tr>
+            <tr>
+                <td>&#8594; y &rarr;</td>
+                <td>"& + # + 8594 + ;"</td>
+                <td>"& + rarr + ;"</td>
+                <td>FLECHA DERECHA</td>
+            </tr>
+            <tr>
+                <td>&#8595; y &darr;</td>
+                <td>"& + # + 8595 + ;"</td>
+                <td>"& + darr + ;"</td>
+                <td>FLECHA HACIA ABAJO</td>
+            </tr>
+            <tr>
+                <td>&#9824; y &spades;</td>
+                <td>"& + # + 9824 + ;"</td>
+                <td>"& + spades + ;"</td>
+                <td>TRAJE DE ESPADA NEGRA</td>
+            </tr>
+            <tr>
+                <td>&#9827; y &clubs;</td>
+                <td>"& + # + 9827 + ;"</td>
+                <td>"& + clubs + ;"</td>
+                <td>TRAJE CLUB NEGRO</td>
+            </tr>
+            <tr>
+                <td>&#9829; y &hearts;</td>
+                <td>"& + # + 9829 + ;"</td>
+                <td>"& + hearts + ;"</td>
+                <td>TRAJE CORAZON NEGRO</td>
+            </tr>
+            <tr>
+                <td>&#9830; y &diams;</td>
+                <td>"& + # + 9830 + ;"</td>
+                <td>"& + diams + ;"</td>
+                <td>TRAJE DIAMANTE NEGRO</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Codificación HTML (juegos de caracteres)</h2>
+    <p>Para mostrar una página HTML correctamente, un navegador web debe saber qué conjunto de caracteres usar. El conjunto de caracteres predeterminado para HTML5 es UTF-8.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Combinación</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>32</td>
+                <td>espacio</td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>cierre de signo de exclamación</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>comillas</td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>numeral</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>signo de dolar</td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>signo de porcentaje</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>ampersand</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>apóstrofe</td>
+            </tr>
+            <tr>
+                <td>40 - 41</td>
+                <td>abrir y cerrar paréntesis</td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>asterisco</td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>Signo de más</td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>coma</td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>guión / menos</td>
+            </tr>
+            <tr>
+                <td>46</td>
+                <td>punto</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>solidus</td>
+            </tr>
+            <tr>
+                <td>48 - 57</td>
+                <td>dígitos del cero al nueve</td>
+            </tr>
+            <tr>
+                <td>58</td>
+                <td>dos puntos</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>punto y coma</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>Signo menor que</td>
+            </tr>
+            <tr>
+                <td>61</td>
+                <td>Signo igual</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>SIgno mayor que</td>
+            </tr>
+            <tr>
+                <td>63</td>
+                <td>Cierre del signo de interrogación</td>
+            </tr>
+            <tr>
+                <td>64</td>
+                <td>arroba</td>
+            </tr>
+            <tr>
+                <td>65 - 90</td>
+                <td>Letras de la A - Z mayusculas</td>
+            </tr>
+            <tr>
+                <td>91</td>
+                <td>Corchete izquierdo</td>
+            </tr>
+            <tr>
+                <td>92</td>
+                <td>Diagonal inversa</td>
+            </tr>
+            <tr>
+                <td>93</td>
+                <td>Corchete derecho</td>
+            </tr>
+            <tr>
+                <td>94</td>
+                <td>acento circunflejo</td>
+            </tr>
+            <tr>
+                <td>95</td>
+                <td>guion bajo</td>
+            </tr>
+            <tr>
+                <td>96</td>
+                <td>acento grave</td>
+            </tr>
+            <tr>
+                <td>97 - 122</td>
+                <td>Letras de la a - z minusculas</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Llave izquierda</td>
+            </tr>
+            <tr>
+                <td>124</td>
+                <td>Linea vertical</td>
+            </tr>
+            <tr>
+                <td>125</td>
+                <td>Llave derecha</td>
+            </tr>
+            <tr>
+                <td>126</td>
+                <td>tilde o virgulilla</td>
+            </tr>
+            <tr>
+                <td>127</td>
+                <td>DEL</td>
+            </tr>
+            <tr>
+                <td>128 - 255</td>
+                <td><a href="https://www.w3schools.com/html/html_charset.asp" target="_blank">El resto</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>El conjunto de caracteres ASCII</h2>
+    <p>ASCII usa los valores de 0 a 31 (y 127) para los caracteres de control. ASCII usa los valores del 32 al 126 para letras, dígitos y símbolos.  ASCII no utiliza los valores de 128 a 255.</p>
+    <hr>
+
+    <h2>El juego de caracteres ANSI (Windows-1252)</h2>
+    <p>ANSI es idéntico a ASCII para los valores de 0 a 127. ANSI tiene un conjunto de caracteres patentado para los valores de 128 a 159. ANSI es idéntico a UTF-8 para los valores de 160 a 255.</p>
+    <hr>
+
+    <h2>El juego de caracteres ISO-8859-1</h2>
+    <p>8859-1 es idéntico a ASCII para los valores de 0 a 127. 8859-1 no utiliza los valores de 128 a 159. 8859-1 es idéntico a UTF-8 para los valores de 160 a 255.</p>
+    <hr>
+
+    <h2>El juego de caracteres UTF-8</h2>
+    <p>UTF-8 es idéntico a ASCII para los valores de 0 a 127. UTF-8 no utiliza los valores de 128 a 159. UTF-8 es idéntico a ANSI y 8859-1 para los valores de 160 a 255. UTF-8 continúa desde el valor 256 con más de 10 000 caracteres diferentes.</p>
+    <hr>
+
+    <h2>La regla de CSS @charset</h2>
+    <p>Puede usar la @charset regla CSS para especificar la codificación de caracteres utilizada en una hoja de estilo.</p>
+    <hr>
+
+    <h2>Localizadores uniformes de recursos HTML</h2>
+    <p>Una URL es otra palabra para una dirección web. Una URL puede estar compuesta de palabras (w3schools.com) o una dirección de Protocolo de Internet (IP) (192.68.20.50).</p>
+    <hr>
+    
+</body>
+</html>

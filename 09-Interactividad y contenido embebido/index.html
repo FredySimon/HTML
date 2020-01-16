@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Open Graph-->
+  <meta property="og:title" content="HTML" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="file:///C:\Users\Fsimo\Documents\Fredy\Programación\Cursos\HTML>" />
+  <meta property="og:image" content="https://www.deustoformacion.com/sites/deustoformacion/files/lenguaje-html5.jpg" />
+  <title>Interactividad y Contenido embibido</title>
+  <style>
+  table{
+        border-collapse: collapse;
+    }
+    td,th{
+        border: 2px solid black;
+        padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactividad y Contenido embibido</h1>
+  <hr>
+
+  <h2>iframes HTML</h2>
+  <p>Un iframe se usa para mostrar una página web dentro de una página web.</p>
+  <p>Use los atributos height y width para especificar el tamaño del iframe.</p>
+  <p>No todas las páginas web permiten mostrarse con un iframe.</p>
+  <p>Por defecto, un iframe tiene un borde alrededor. Para eliminar el borde, agregue el styleatributo y use la border:none; propiedad CSS. Con CSS, también puede cambiar el tamaño, el estilo y el color del borde del iframe</p>
+  <iframe src="https://www.pexels.com/" frameborder="0" height="500" width="500" style="border:2px solid black;"></iframe>
+
+  <p>Se puede usar un iframe como marco objetivo para un enlace. El target atributo del enlace debe referirse al name atributo del iframe</p>
+  <iframe src="https://www.pexels.com/" frameborder="0" name="iframe_a"></iframe>
+  <p style="margin-top: 10px; margin-bottom: 10px;"><a href="https://simpsons-latino.com/10x02-el-mago-de-la-terraza-por-siempre-verde/" target="iframe_a">Cambiar</a></p>
+
+  <h2>Otros ejemplos de iframe</h2>
+  <h4>HTML YouTube Videos</h4>
+  <p>La forma más fácil de reproducir videos en HTML es usar YouTube. YouTube mostrará una identificación (como tgbNymZ7vqY), cuando guarde (o reproduzca) un video. Puede usar esta identificación y consultar su video en el código HTML.</p>
+  <iframe width="400" height="200" src="https://www.youtube-nocookie.com/embed/ktPvUFtUtak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Puede hacer que su video comience a reproducirse automáticamente cuando un usuario visite esa página agregando un parámetro simple a su URL de YouTube: "?autoplay=" Valor 0 (predeterminado): el video no se reproducirá automáticamente cuando se cargue el reproductor. Valor 1: el video se reproducirá automáticamente cuando se cargue el reproductor.</p>
+  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="1" width="420" height="345"></iframe>
+  <p>Una lista de videos separados por comas para reproducir (además de la URL original).</p>
+  <p>Bucle de YouTube Valor 0 (predeterminado): el video se reproducirá solo una vez. Valor 1: el video se repetirá (para siempre)</p>
+  <iframe src="https://www.youtube.com/embed/DABqK6e-5Dw?playlist=DABqK6e-5Dw&loop=1" width="560" height="315" frameborder="0"></iframe>
+  <p>Controles de YouTube Valor 0: los controles del reproductor no se muestran. Valor 1 (predeterminado): la pantalla de controles del reproductor.</p>
+  <iframe src="https://www.youtube.com/embed/O4OgVRWpOwQ?controls=0" frameborder="0" width="420" height="345"></iframe>
+  <p><b>Nota:</b> YouTube object y embed quedó en desuso desde enero de 2015. Debería migrar sus videos para usarlos iframe en su lugar.</p>
+  <h4>HTML mapas</h4>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61768.34750133835!2d-90.52757990809133!3d14.626300485655477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a180655c3345%3A0x4a72c7815b867b25!2sGuatemala!5e0!3m2!1ses-419!2sgt!4v1564349097860!5m2!1ses-419!2sgt" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <hr>
+
+  <h2>Geolocalización HTML5</h2>
+  <p>La API de geolocalización HTML se utiliza para localizar la posición de un usuario. Como esto puede comprometer la privacidad, la posición no está disponible a menos que el usuario la apruebe.</p>
+  <p><b>Nota: </b>La geolocalización es más precisa para dispositivos con GPS, como teléfonos inteligentes.</p>
+  <p><b>Nota: </b>A partir de Chrome 50, la API de geolocalización solo funcionará en contextos seguros como HTTPS. Si su sitio está alojado en un origen no seguro (como HTTP), las solicitudes para obtener la ubicación de los usuarios ya no funcionarán.</p>
+  <p>El getCurrentPosition() método se utiliza para devolver la posición del usuario. El siguiente ejemplo devuelve la latitud y longitud de la posición del usuario.</p>
+  <button onclick="obtenerUbicacion()">Latitud y longitud</button>
+  <p id="demo"></p>
+  <script>
+  var a = document.getElementById("demo");
+  function obtenerUbicacion(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(mostrarPosicion);
+    } else {
+      a.innerHTML = "La geolocalización no es compatible con este navegador."
+    }
+  }
+  function mostrarPosicion(position){
+    a.innerHTML = "Latitud: " + position.coords.latitude + "<br>Longitud: " + position.coords.longitude;
+  }
+  </script>
+  <p>El segundo parámetro del getCurrentPosition()método se usa para manejar errores. Especifica una función para ejecutar si no puede obtener la ubicación del usuario.</p>
+  <button onclick="obtenerUbicacion1()">Obtener</button>
+  <p id="demo1"></p>
+  <script>
+  var b = document.getElementById("demo1");
+  function obtenerUbicacion1(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(mostrarPosicion1, mostrarErrores);
+    } else {
+      b.innerHTML = "La geolocalización no es compatible con este navegador."
+    }
+  }
+  function mostrarPosicion1(position){
+    b.innerHTML = "Latitud: " + position.coords.latitude + 
+  "<br>Longitud: " + position.coords.longitude;
+  }
+  function mostrarErrores(){
+    switch(error.code){
+      case error.PERMISSION_DENIED: b.innerHTML = "El usuario rechazó la solicitud de geolocalización".
+      break;
+      case error.POSITION_UNAVAILABLE: b.innerHTML = "La información de ubicación no está disponible."
+      break;
+      case error.TIMEOUT: b.innerHTML = "Se agotó el tiempo de espera para solicitar la ubicación del usuario."
+      break;
+      case error.UNKNOWN_ERROR: B.innerHTML = "Un error desconocido ocurrió."
+    }
+  }
+  </script>
+  <p>Para mostrar el resultado en un mapa, necesita acceder a un servicio de mapas, como Google Maps. En el siguiente ejemplo, la latitud y longitud devueltas se usan para mostrar la ubicación en un mapa de Google (usando una imagen estática).</p>
+  <!--
+    function showPosition(position) {
+  var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
+  "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+  -->
+  <h3>El método getCurrentPosition () - Devolver datos</h3>
+  <p><b>coords.latitude: </b>La latitud como un número decimal (siempre devuelto).</p>
+  <p><b>coords.longitude: </b>La longitud como un número decimal (siempre devuelto).</p>
+  <p><b>coords.accuracy: </b>La precisión de la posición (siempre devuelta)</p>
+  <p><b>coords.altitude: </b>La altitud en metros sobre el nivel medio del mar (devuelto si está disponible)</p>
+  <p><b>coords.altitudeAccuracy: </b>La precisión de altitud de la posición (devuelta si está disponible)</p>
+  <p><b>coords.heading: </b>El rumbo en grados en sentido horario desde el norte (devuelto si está disponible)</p>
+  <p><b>coords.speed: </b>La velocidad en metros por segundo (devuelta si está disponible)</p>
+  <p><b>timestamp: </b>La fecha / hora de la respuesta (devuelta si está disponible)</p>
+  <h3>Objeto de geolocalización - Otros métodos interesantes</h3>
+  <p>El objeto de geolocalización también tiene otros métodos interesantes: </p>
+  <ul>
+    <li>watchPosition() - Devuelve la posición actual del usuario y continúa devolviendo la posición actualizada a medida que el usuario se mueve (como el GPS en un automóvil).</li>
+    <li>clearWatch()- Detiene el watchPosition()método.</li>
+  </ul>
+  <button onclick="obtenerUbicacion2()">Ubicacion</button>
+  <p id="demo2"></p>
+  <p id="mapholder"></p>
+  <script>
+    var r = document.getElementById("demo2");
+    function obtenerUbicacion2(){
+      if(navigator.geolocation){
+        navigator.geolocation.watchPosition(mostrarUbicacion);
+      } else {
+        r.innerHTML = "La geolocalización no es compatible con este navegador."
+      }
+    }
+    function mostrarUbicacion(position){
+      r.innerHTML = "Latitud: " + position.coords.latitude + 
+  "<br>Longitud: " + position.coords.longitude;
+    }
+    function showPosition(position) {
+  var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+  </script>
+  <hr>
+
+  <h2>HTML5 arrastrar y soltar</h2>
+  <p>Arrastrar y soltar es una característica muy común. Es cuando "agarra" un objeto y lo arrastra a una ubicación diferente. En HTML5, arrastrar y soltar es parte del estándar: cualquier elemento puede ser arrastrable.</p>
+  <p>Para hacer que un elemento sea arrastrable, establezca el draggable atributo en verdadero. Luego, especifique qué debe suceder cuando se arrastra el elemento. El dataTransfer.setData()método establece el tipo de datos y el valor de los datos arrastrados. El ondragoverevento especifica dónde se pueden soltar los datos arrastrados.</p>
+  <div style="width: 350px; height: 70px; padding: 10px; border: 1px solid black;" ondrop="soltar(event)" ondragover="permitir(event)"></div>
+  <div style="width: 350px; height: 70px; padding: 10px; border: 1px solid black;" ondrop="soltar(event)" ondragover="permitir(event)">
+    <img id="imagen" src="http://2.bp.blogspot.com/-qaVEewFNSOo/UDKOUQqvKrI/AAAAAAAAAE0/X_NK9MzwhNs/s1600/Logotipo+Tipogra%CC%81fico+Exclusivo.jpg" alt="disney" draggable="true" ondragstart="arrastrar(event)" width="336" height="69">
+  </div>
+  <script>
+  function permitir(ev){
+    ev.preventDefault();
+  }
+  function arrastrar(ev){
+    ev.dataTransfer.setData("text", ev.target.id)
+  }
+  function soltar(ev){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
+  <hr>
+
+  <h2>HTML5 Web Storage / Almacenamiento web</h2>
+  <p>Almacenamiento web HTML; mejor que las cookies. Con el almacenamiento web, las aplicaciones web pueden almacenar datos localmente en el navegador del usuario. Antes de HTML5, los datos de la aplicación debían almacenarse en cookies, incluidas en cada solicitud del servidor. El almacenamiento web es más seguro y se pueden almacenar grandes cantidades de datos localmente, sin afectar el rendimiento del sitio web. A diferencia de las cookies, el límite de almacenamiento es mucho mayor (al menos 5 MB) y la información nunca se transfiere al servidor. El almacenamiento web es por origen (por dominio y protocolo). Todas las páginas, de un origen, pueden almacenar y acceder a los mismos datos.</p>
+  <p>El almacenamiento web HTML proporciona dos objetos para almacenar datos en el cliente:</p>
+  <ul>
+    <li>window.localStorage - almacena datos sin fecha de vencimiento</li>
+    <li>window.sessionStorage - almacena datos para una sesión (los datos se pierden cuando se cierra la pestaña del navegador)</li>
+  </ul>
+  <p>Antes de usar el almacenamiento web, verifique el soporte del navegador para localStorage y sessionStorage.</p>
+  <img src="./img/Storage.PNG" alt="storage">
+  <p>El objeto localStorage almacena los datos sin fecha de vencimiento. Los datos no se eliminarán cuando se cierre el navegador y estarán disponibles al día siguiente, semana o año.</p>
+  <p>La sintaxis para eliminar el elemento localStorage es: <b>localstorage.removeItem("")</b></p>
+  <div id="resultado"></div>
+  <script>
+  if(typeof(Storage) !== "undefined"){
+    localStorage.setItem("lastname", "Smith");
+    document.getElementById("resultado").innerHTML=localStorage.getItem("lastname");
+  } else {
+    document.getElementById("resultado").innerHTML="Lo sentimos tu navegador no soporta Almacenamiento web."
+  }
+  </script>
+  <p>Contar la cantidad de veces que un usuario ha hecho click en un botón. No se reinicia ni con cargar de nuevo la página.</p>
+  <button onclick="contadorClicks()" type="button">Click</button>
+  <p id="resultado1"></p>
+  <script>
+  function contadorClicks(){
+    if(typeof(Storage)!== "undefined"){
+      if(localStorage.clickcount){
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("resultado1").innerHTML="La cantidad de clicks al boton es: " + localStorage.clickcount;
+    } else {
+      document.getElementById("resultado1").innerHTML="Lo sentimos tu navegador no soporta Almacenamiento web."
+    }
+  }
+  </script>
+  <p>El sessionStorage objeto es igual al objeto localStorage, excepto que almacena los datos para una sola sesión. Los datos se eliminan cuando el usuario cierra la pestaña específica del navegador. Contar la cantidad de veces que un usuario ha hecho clic en un botón, en la sesión actual</p>
+  <button onclick="contadorClicks1()" type="button">Click</button>
+  <p id="resultado2"></p>
+  <script>
+    function contadorClicks1(){
+      if(typeof(Storage)!== "undefined"){
+        if(sessionStorage.clickcount){
+          sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+          sessionStorage.clickcount = 1;
+        }
+        document.getElementById("resultado2").innerHTML="La cantidad de clicks al boton es: " + sessionStorage.clickcount;
+      } else {
+        document.getElementById("resultado2").innerHTML="Lo sentimos tu navegador no soporta Almacenamiento web."
+      }
+    }
+    </script>
+  <hr>
+
+  <h2>HTML5 Web Workers / Trabajadores web</h2>
+  <p>Un trabajador web es un JavaScript que se ejecuta en segundo plano, sin afectar el rendimiento de la página. Al ejecutar secuencias de comandos en una página HTML, la página deja de responder hasta que finaliza la secuencia de comandos. Un trabajador web es un JavaScript que se ejecuta en segundo plano, independientemente de otros scripts, sin afectar el rendimiento de la página. Puede continuar haciendo lo que quiera: hacer clic, seleccionar cosas, etc., mientras el trabajador web se ejecuta en segundo plano.</p>
+  <p>Contadores: <output id="resultado3"></output></p>
+  <button onclick="iniciarTrabajador()">Iniciar</button>
+  <button onclick="pararTrabajador()">Parar</button>
+  <script>
+    var s;
+    function iniciarTrabajador(){
+      if(typeof(Worker) !== "undefined"){
+        if(typeof(s) == "undefined"){
+          s = new Worker("contador.js");
+        }
+        s.onmessage = function(event){
+          document.getElementById("resultado3").innerHTML=event.data;
+        };
+      } else {
+        document.getElementById("resultado3").innerHTML="Lo sentimos tu navegador no soporta Almacenamiento web."
+      }
+    }
+
+    function pararTrabajador(){
+      s.terminate();
+      s.undefined;
+    }
+  </script>
+  <hr>
+
+  <h2>Complementos o Plug-ins HTML</h2>
+  <p>El propósito de un complemento es extender la funcionalidad de un navegador web. Las aplicaciones auxiliares (complementos) son programas informáticos que amplían la funcionalidad estándar de un navegador web. Se pueden agregar complementos a las páginas web con la etiqueta object o la embed. Los complementos se pueden usar para muchos propósitos: mostrar mapas, buscar virus, verificar su identificación bancaria, etc.</p>
+  <h4>El elemento object</h4>
+  <p>El object elemento es compatible con todos los navegadores. Define un objeto incrustado dentro de un documento HTML. Se utiliza para insertar complementos (como applets de Java, lectores de PDF, reproductores Flash) en páginas web.</p>
+  <p>También se puede usar para incluir HTML en HTML. O imágenes si quieres</p>
+  <h4>El elemento embed</h4>
+  <p>También define un objeto incrustado dentro de un documento HTML.</p>
+  <hr>
+
+  <h2>Modal</h2>
+  <dialog id="modal" style="width: 500px;">
+      <button id="close" >Cerrar</button>
+      <h2>Curso HTML5.2</h2>
+      <p>Precio: 0000</p>
+      <p>Profesor: Álvaro Felipe</p>
+    </dialog>
+  <button id="button">Abrir modal</button>
+  <script >
+      const modal = document.getElementById('modal');
+      const button = document.getElementById('button');
+      const close = document.getElementById('close');
+
+      button.addEventListener('click', () => {
+        modal.setAttribute('open', 'true');
+      })
+
+      close.addEventListener('click', () => {
+        modal.removeAttribute('open');
+      })
+  </script>
+  <hr>
+
+  <h2>Detalles</h2>
+  <details >
+      <summary>Definición</summary>
+      <p>Lenguaje de marcado de hipertexto.</p>
+    </details>
+  <hr>
+
+  <h2>Canvas</h2>
+  <p>El elemento HTML canvas se usa para dibujar gráficos en una página web. Se utiliza para dibujar gráficos, sobre la marcha, a través de JavaScript. Es solo un contenedor para gráficos. Debe usar JavaScript para dibujar los gráficos. Canvas tiene varios métodos para dibujar trazados, cuadros, círculos, texto y agregar imágenes. Un lienzo es un área rectangular en una página HTML. Por defecto, un lienzo no tiene borde ni contenido.</p>
+  <p>Soporte de navegadores:</p>
+  <img src="./img/Soporte.PNG" alt="Soprte de navegadores" width="80%">
+  <p>Lienzo vacio:</p>
+  <canvas id="Grafica" width="200" height="100" style="border: 1px solid black;"></canvas>
+  <p>Dibujar una linea:</p>
+  <canvas id="Grafica1" width="200" height="100" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+  var a = document.getElementById("Grafica1");
+  var b = a.getContext("2d");
+  b.moveTo(0,0);
+  b.lineTo(200,100);
+  b.stroke();
+  </script>
+  <p>Dibujar un circulo:</p>
+  <canvas id="Grafica2" width="200" height="100" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+  var c = document.getElementById("Grafica2");
+  var d = c.getContext("2d");
+  d.beginPath();
+  d.arc(40,40,40,0,2*Math.PI);
+  d.stroke();
+  </script>
+  <p>Dibujar un texto:</p>
+  <canvas id="Grafica3" width="200" height="100" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+  var e = document.getElementById("Grafica3");
+  var f = e.getContext("2d");
+  f.font = "30px Arial";
+  f.fillText("Hola Mundo",0,100);
+  </script>
+  <p>Texto de trazo:</p>
+  <canvas id="Grafica4" width="200" height="100" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+  var g = document.getElementById("Grafica4");
+  var h = g.getContext("2d");
+  h.font = "30px Arial";
+  h.strokeText("Hola Mundo", 0,25);
+  </script>
+  <p>Dibujar degradado lineal:</p>
+  <canvas id="Grafica5" width="200" height="100" style="border: 1px solid #d3d3d3;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+  var i = document.getElementById("Grafica5");
+  var j = i.getContext("2d");
+  var k = j.createLinearGradient(200,0,0,0);
+  k.addColorStop(0, "red");
+  k.addColorStop(1, "white");
+  j.fillStyle = k;
+  j.fillRect(0,0,180,100);
+  </script>
+  <p>Dibujar degradado circular:</p>
+  <canvas id="Grafica6" width="200" height="100" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <script>
+    var l = document.getElementById("Grafica6");
+    var m = l.getContext("2d");
+    var n = m.createRadialGradient(75,50,5,90,60,100);
+    n.addColorStop(0, "red");
+    n.addColorStop(1, "black");
+    m.fillStyle = n;
+    m.fillRect(0,0,200,100);
+  </script>
+  <p>Dibujar imagen:</p>
+  <img id="scream" src="https://www.w3schools.com/html/img_the_scream.jpg" alt="scream" width="200" height="300">
+  <canvas id="Grafica7" width="250" height="300" style="border: 1px solid black;">Tu navegador no soporta la etiqueta HTML5 canvas.</canvas>
+  <button onclick="funcion()">Click</button>
+  <script>
+    function funcion(){
+      var o = document.getElementById("Grafica7");
+      var p = o.getContext("2d");
+      var q = document.getElementById("scream");
+      p.drawImage(q, 12.5,10)
+    }
+  </script>
+  <hr>
+
+  <h2>SVG</h2>
+  <ul>
+    <li>SVG significa Gráficos Vectoriales Escalables.</li>
+    <li>SVG se usa para definir gráficos para la Web.</li>
+    <li>SVG es una recomendación del W3C.</li>
+  </ul>
+  <p>El elemento svg es un contenedor para gráficos SVG. SVG tiene varios métodos para dibujar trazados, cuadros, círculos, texto e imágenes gráficas.</p>
+  <p>Soporte de navegador:</p>
+  <img src="./img/Soporte SVG.PNG" alt="Soporte SVG">
+  <p>Circulo:</p>
+  <svg width="100" height="100" style="border: 1px solid black;">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />Lo sentimos, tu navegador no soporta lineas SVG.
+  </svg>
+  <p>Rectángulo:</p>
+  <svg width="400" height="100" style="border: 1px solid black; padding:10px;">
+    <rect width="400" height="100" style="fill: rgb(0, 0, 255); stroke-width:10; stroke:rgb(0,0,0)" />
+  </svg>
+  <p>Rectángulo redondeado:</p>
+  <svg width="190" height="190" style="border: 1px solid black; padding:10px;">
+    <rect x="20" y="20" rx="40" ry="40" width="150" height="150" style="fill: red; stroke:black; stroke-width:5;opacity:0.5" />
+  </svg>
+  <p>Estrella:</p>
+  <svg width="200" height="200" style="border: 1px solid black; padding:10px;"> 
+    <polygon points="100,10 40,198 190, 78 10, 78 160, 198" style="fill: lime; stroke:blue; stroke-width:5; fill-rule:evenodd;" />Lo sentimos, tu navegador no soporta lineas SVG.
+  </svg> 
+  <p>Logo:</p>
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%" >
+        <stop offset="0%" style="stop-color: black; stop-opacity:1" />
+        <stop offset="100%" style="stop-color: rgb(255, 0, 0); stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">LOGO</text>
+    Lo sentimos, tu navegador no soporta lineas SVG.
+  </svg>
+  <hr>
+
+  <h2>Diferencias entre SVG y Canvas</h2>
+  <p>SVG es un lenguaje para describir gráficos 2D en XML. Canvas dibuja gráficos 2D, sobre la marcha (con un JavaScript). SVG está basado en XML, lo que significa que cada elemento está disponible dentro del SVG DOM. Puede adjuntar controladores de eventos de JavaScript para un elemento. En SVG, cada forma dibujada se recuerda como un objeto. Si se cambian los atributos de un objeto SVG, el navegador puede volver a representar automáticamente la forma. El lienzo se representa píxel por píxel. En el lienzo, una vez que se dibuja el gráfico, el navegador lo olvida. Si se cambia su posición, se debe volver a dibujar toda la escena, incluidos los objetos que podrían haber sido cubiertos por el gráfico.</p>
+  <hr>
+
+  <h2>Comparación de Canvas y SVG</h2>
+  <p>La siguiente tabla muestra algunas diferencias importantes entre Canvas y SVG:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Canvas</th>
+        <th>SVG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Resolución dependiente.</td>
+        <td>Resolución independiente.</td>
+      </tr>
+      <tr>
+        <td>No hay soporte para controladores de eventos.</td>
+        <td>Soporte para controladores de eventos.</td>
+      </tr>
+      <tr>
+        <td> Pobres capacidades de representación de texto.</td>
+        <td>El más adecuado para aplicaciones con grandes áreas de representación (Google Maps).</td>
+      </tr>
+      <tr>
+        <td>Puede guardar la imagen resultante como .png o .jpg</td>
+        <td>Representación lenta si es compleja (cualquier cosa que use mucho el DOM será lenta).</td>
+      </tr>
+      <tr>
+        <td>Muy adecuado para juegos con gráficos intensivos.</td>
+        <td>No apto para aplicaciones de juegos.</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <h2>Eventos enviados por el servidor</h2>
+  <p>Los eventos enviados por el servidor permiten que una página web obtenga actualizaciones de un servidor.</p>
+  <h4>Eventos enviados por el servidor: mensajería unidireccional</h4>
+  <p>Un evento enviado por el servidor es cuando una página web obtiene automáticamente actualizaciones de un servidor. Esto también era posible antes, pero la página web tendría que preguntar si había actualizaciones disponibles. Con los eventos enviados por el servidor, las actualizaciones vienen automáticamente. Ejemplos: actualizaciones de Facebook / Twitter, actualizaciones de precios de acciones, noticias, resultados deportivos, etc.</p>
+  <p>El objeto EventSource se usa para recibir notificaciones de eventos enviadas por el servidor.</p>
+  <p>El onopen se usa cuando una conexion al servidor se abre.</p>
+  <p>El onmmessage se usa cuando se recibe un mensaje.</p>
+  <p>El onerror se usa cuando ocurre un error.</p>
+  <div id="demo3"></div>
+  <script>
+  if(typeof(EventSource) !== "undefined"){
+    var source = new EventSource("demo_sse.php");
+    source.onmessage = function(event){
+      document.getElementById("demo3").innerHTML += event.data + "<br>";
+    };
+  } else {
+    document.getElementById("demo3").innerHTML = "Lo sentimos tu navegador no soporta Almacenamiento web." 
+  }
+  </script>
+  <hr>
+
+  <h2>El protocolo Open Graph</h2>
+  <p>El protocolo Open Graph permite que cualquier página web se convierta en un objeto rico en un gráfico social. Por ejemplo, esto se usa en Facebook para permitir que cualquier página web tenga la misma funcionalidad que cualquier otro objeto en Facebook.</p>
+  <p>Para convertir sus páginas web en objetos gráficos, debe agregar metadatos básicos a su página. Hemos basado la versión inicial del protocolo en RDFa, lo que significa que colocará meta etiquetas adicionales en head su página web. Las cuatro propiedades requeridas para cada página son:</p>
+  <ol>
+    <li>og:title - El título de su objeto como debería aparecer dentro del gráfico, por ejemplo, "The Rock".</li>
+    <li>og:type- El tipo de su objeto, por ejemplo, "video.movie". Dependiendo del tipo que especifique, también pueden ser necesarias otras propiedades.</li>
+    <li>og:image - Una URL de imagen que debe representar su objeto dentro del gráfico.</li>
+    <li>og:url - La URL canónica de su objeto que se utilizará como su ID permanente en el gráfico, por ejemplo, "http://www.imdb.com/title/tt0117500/".</li>
+  </ol>
+  <hr>
+
+</body>
+</html>
+

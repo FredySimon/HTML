@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clases y ID</title>
+    <style>
+    .ciudades{
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+    }
+    span.importante{
+        font-size: 200%;
+        color: red;
+    }
+    .centrar{
+        text-align: center;
+    }
+    #encabezado{
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Clases y ID</h1>
+    <hr>
+
+    <h2>El atributo de clase</h2>
+    <p>El classatributo HTML se usa para definir estilos iguales para elementos con el mismo nombre de clase. Por lo tanto, todos los elementos HTML con el mismo classatributo obtendrán el mismo estilo.</p>
+    <p>En CSS, para seleccionar elementos con una clase específica, escriba un carácter de punto (.), Seguido del nombre de la clase.</p>
+    <p>Diferentes etiquetas pueden tener el mismo nombre de clase y, por lo tanto, compartir el mismo estilo.</p>
+    <div class="ciudades">
+        <h4>London</h4>
+        <p>London es la capital de inglaterra.</p>
+    </div>
+    <div class="ciudades">
+        <h4>Paris</h4>
+        <p>Paris es la capital de Francia.</p>
+    </div>
+    <div class="ciudades">
+        <h4>Tokyo</h4>
+        <p>Tokyo es la capital de Japon.</p>
+    </div>
+    <p>El class atributo HTML también se puede usar en elementos en línea.</p>
+    <h4>Mi encabezado <span class="importante">imporatante</span>.</h4>
+    <p>Este es texto <span class="importante">importante</span>.</p>
+    <p>El class atributo se puede usar en cualquier elemento HTML. El nombre de la clase distingue entre mayúsculas y minúsculas. </p>
+    <hr>
+
+    <h2>Clases Múltiples</h2>
+    <p>Los elementos HTML pueden tener más de un nombre de clase, cada nombre de clase debe estar separado por un espacio.</p>
+    <div class="ciudades centrar">
+        <h4>London</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vero reiciendis maiores minus perspiciatis est illum? Maxime magnam nesciunt mollitia! Sequi sapiente sunt sit odit hic nostrum possimus rem officia!</p>
+    </div>
+    <hr>
+
+    <h2>Usando el atributo de clase en JavaScript</h2>
+    <p>JavaScript también puede utilizar el nombre de la clase para realizar ciertas tareas para elementos con el nombre de clase especificado.</p>
+    <p>JavaScript puede acceder a elementos con un nombre de clase específico mediante el getElementsByClassName()método.</p>
+    <button onclick="funcion()">Ocultar elementos con clase elemento.</button>
+    <h3 class="elemento">Hola</h3>
+    <h3 class="elemento">Adios</h3>
+    <h3>:)</h3>
+    <script>
+    function funcion(){
+        var x = document.getElementsByClassName("elemento");
+        for(var i = 0; i<x.length; i++){
+            x[i].style.display = "none";
+        }
+    }
+    </script>
+    <hr>
+
+    <h2>El atributo id</h2>
+    <p>El idatributo especifica una identificación única para un elemento HTML (el valor debe ser único dentro del documento HTML).</p>
+    <p>CSS y JavaScript pueden usar el valor de identificación para realizar ciertas tareas para el elemento con el valor de identificación específico.</p>
+    <p>En CSS, para seleccionar un elemento con una identificación específica, escriba un carácter hash (#), seguido de la identificación del elemento</p>
+    <p>El atributo id se puede usar en cualquier elemento HTML. El valor de identificación distingue entre mayúsculas y minúsculas. El valor de identificación debe contener al menos un carácter y no debe contener espacios en blanco.</p>
+    <h1 id="encabezado">Encabezado</h1>
+    <hr>
+
+    <h2>Diferencia entre clase e identificación</h2>
+    <p>Un elemento HTML solo puede tener una identificación única que pertenezca a ese único elemento, mientras que varios elementos pueden usar un nombre de clase.</p>
+    <hr>
+
+    <h2>Marcadores con ID y enlaces</h2>
+    <p>Los marcadores HTML se utilizan para permitir a los lectores saltar a partes específicas de una página web. Los marcadores pueden ser útiles si su página web es muy larga. Para hacer un marcador, primero debe crear el marcador y luego agregarle un enlace. Cuando se hace clic en el enlace, la página se desplazará a la ubicación con el marcador.</p>
+    <hr>
+
+    <h2>Usando el atributo id en JavaScript</h2>
+    <p>JavaScript puede acceder a un elemento con una identificación especificada mediante el getElementById()método.</p>
+    <h3 id="demo">¡Hola!</h3>
+    <button onclick="funcion1()">Despedir</button>
+    <script>
+    function funcion1(){
+        document.getElementById("demo").innerHTML="¡Adios!"
+    }
+    </script>
+    <hr>
+
+</body>
+</html>

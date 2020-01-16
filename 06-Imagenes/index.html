@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body style="background-image: url('https://images.pexels.com/photos/1755640/pexels-photo-1755640.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); color: white;">
+  <h1>Imagenes</h1>
+  <hr>
+
+  <p>Las imágenes pueden mejorar el diseño y la apariencia de una página web.</p>
+  <p>El alt atributo es obligatorio. Una página web no se validará correctamente sin ella.</p>
+  <p>Especifique siempre el ancho y el alto de una imagen. Si no se especifican el ancho y el alto, la página puede parpadear mientras se carga la imagen.</p>
+  <p>Si no se especifica, el navegador espera encontrar la imagen en la misma carpeta que la página web.</p>
+  <p>Puede acceder a imágenes desde cualquier dirección web en el mundo.</p>
+  <p>Cargar imágenes lleva tiempo. Las imágenes grandes pueden ralentizar su página. Usa imágenes con cuidado.</p>
+  <img src="https://images.pexels.com/photos/2727483/pexels-photo-2727483.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Texto alternativo." width="500" height="333">
+  <hr>
+
+  <h2>Imágenes animadas</h2>
+  <p>HTML permite GIF animados.</p>
+  <img src="https://media.giphy.com/media/13gvXfEVlxQjDO/giphy.gif" alt="gif" style="width: 300px;height: 350px;">
+  <hr>
+
+  <h2>Imagen flotante</h2>
+  <p>Use la floatpropiedad CSS para dejar que la imagen flote a la derecha o a la izquierda de un texto</p>
+  <p><img src="https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" width="100" height="100" style="float: right;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam laudantium quia voluptates temporibus ipsum molestias velit labore perspiciatis veritatis at officia minima, doloremque id ratione exercitationem repellendus eos, consequatur sint.</p>
+  <p><img src="https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="camino" style="float: left;" width="100" height="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolor neque doloribus veritatis accusantium itaque? Quos voluptatem, quidem incidunt doloremque, nostrum placeat velit sapiente, tenetur labore similique necessitatibus at doloribus.</p>
+  <hr>
+
+  <h2>Mapas de imagen</h2>
+  <p>Un mapa de imagen es una imagen con áreas en las que se puede hacer clic.</p>
+  <p>El usemap valor comienza con una etiqueta hash #seguida del nombre del mapa de imagen y se usa para crear una relación entre la imagen y el mapa de imagen.</p>
+  <p>El map elemento se utiliza para crear un mapa de imagen y se vincula a la imagen mediante el name atributo.</p>
+  <p>Un área en la que se puede hacer clic se define usando un area elemento.</p>
+  <ul>
+    <p>Debe definir la forma del área y puede elegir uno de estos valores:</p>
+    <li>rect - define una región rectangular</li>
+    <li>circle - define una región circular</li>
+    <li>poly - define una región poligonal</li>
+    <li>default - define toda la región</li>
+  </ul>
+  <p>Coordenadas para rect: 1. distancia del margen izq. 2. distancia del margen superior. 3. distancia del margen izq. 4. distancia del margen superior.</p>
+  <p>Para agregar un área circular, primero ubique las coordenadas del centro del círculo. Luego especifique el radio del círculo</p>
+  <img src="https://st3.depositphotos.com/14521116/18171/i/1600/depositphotos_181715246-stock-photo-casually-dressed-student-blogger-writer.jpg" alt="Lugar de trabajo" width="500" usemap="#trabajomap">
+  <map name="trabajomap">
+    <area shape="rect" coords="110,0,385,250" href="https://www.w3schools.com/html/computer.htm" alt="computadora">
+    <area shape="rect" coords="425,140,480,250" href="https://www.w3schools.com/html/phone.htm" alt="celular">
+    <area shape="circle" coords="55,200,44" href="https://www.w3schools.com/html/coffee.htm" alt="cafe">
+  </map>
+  <hr>
+
+  <h2>Mapa de imagen y JavaScript</h2>
+  <p>Un área en la que se puede hacer clic no tiene que ser un enlace a otra página, también puede activar una función de JavaScript.</p>
+  <img src="https://st3.depositphotos.com/14521116/18171/i/1600/depositphotos_181715246-stock-photo-casually-dressed-student-blogger-writer.jpg" alt="Lugar de trabajo." width="300" height="200" usemap="#trabajomap1">
+  <map name="trabajomap1">
+    <area shape="circle" coords="30,110,25" alt="Cafe" onclick="funcion()">
+  </map>
+  <script>
+  function funcion(){
+    alert("Click en cafe.")
+  }
+  </script>
+  <hr>
+
+  <h2>Imágenes de fondo</h2>
+  <p>Se puede especificar una imagen de fondo en casi cualquier elemento HTML. Para agregar una imagen de fondo en HTML, use la propiedad CSS background-image.</p>
+  <div style="border: 1px solid black; width:500px; height: 500px; background-image: url('https://images.pexels.com/photos/2868242/pexels-photo-2868242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsam corporis vitae cum nulla atque qui sapiente, maxime dolorem! Amet iste, voluptates accusantium nihil consectetur quaerat cumque ullam debitis deserunt. </div>
+  <hr>
+
+  <h2>Imagen de fondo en una página</h2>
+  <p>Si desea que toda la página tenga una imagen de fondo, debe especificar la imagen de fondo en el elemento body.</p>
+  <p>Si la imagen de fondo es más pequeña que el elemento, la imagen se repetirá, horizontal y verticalmente, hasta que llegue al final del elemento.</p>
+  <p>Para evitar que la imagen de fondo se repita, use la background-repeat: no-repeat propiedad</p>
+  <hr>
+
+  <h2>Cubierta de fondo</h2>
+  <p>Si desea que la imagen de fondo cubra todo el elemento, puede establecer la background-sizepropiedad en cover. Además, para asegurarse de que todo el elemento esté siempre cubierto, establezca la propiedad background-attach en fixed. Esto es más para fondo del body. </p>
+  <div style="background-image: url('https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem ut nobis cum odit illum id nam dicta adipisci incidunt tenetur, maxime error ex atque perspiciatis voluptatem! Qui in placeat repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eligendi placeat soluta perferendis dignissimos laborum debitis, explicabo quisquam nam exercitationem et consectetur asperiores non dolorem ex labore ratione, totam adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda similique ea, deserunt hic ullam, quod laudantium libero architecto maxime facilis eos omnis quaerat sit fuga unde ad iure adipisci! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia mollitia qui dolores ipsum, illo reprehenderit quas commodi aut, nulla accusantium perspiciatis! Vitae sit quia commodi vero saepe, ratione nisi id!</div>
+  <hr>
+
+  <h2>Elemento picture</h2>
+  <p>El elemento de imagen nos permite mostrar diferentes imágenes para diferentes dispositivos o tamaños de pantalla.</p>
+  <p>El elemento picture contiene varios elementos source, cada uno de los cuales se refiere a diferentes fuentes de imagen. De esta manera, el navegador puede elegir la imagen que mejor se adapte a la vista y / o dispositivo actual.</p>
+  <p>Siempre especifique un img elemento como el último elemento hijo del picture. El img elemento es utilizado por los navegadores que no lo admiten, o si ninguna de lassource etiquetas coincide.</p>
+  <p>El navegador usará el primer source elemento con valores de atributo coincidentes e ignorará los siguientes.</p>
+  <picture>
+    <source style="width:850px;" media="(min-width: 465px)" srcset="./files/tiger.jpg">
+    <source style="width:850px;" media="(min-width: 650px)" srcset="./files/bridge.jpg">
+    <img src="./files/apartment.jpg" alt="Flowers" style="width: 500px;">
+  </picture>
+  <picture>
+    <source srcset="./files/tiger.jpg" media="(max-width: 600px">
+    <source srcset="./files/bridge.jpg" media="(max-width: 1500px">
+    <source srcset="./files/bridge.jpg">
+    <img src="./files/tiger.jpg" style="width:auto;"> 
+  </picture>
+  <hr>
+
+  <img src="./files/apartment.jpg" srcset="./files/bridge.jpg 1.5x, ./files/tiger.jpg 2x" width="50">
+  <hr>
+
+</body>
+
+</html>

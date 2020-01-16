@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estilos</title>
+    <style>
+        h1{
+            color:royalblue;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body style="background-color:powderblue;">
+    <h1>Estilos</h1>
+    <hr>
+
+    <p>CSS significa C ascading S tyle S heets.</p>
+    <p>CSS describe cómo se deben mostrar los elementos HTML en la pantalla, papel u otros medios.</p>
+    <p>CSS se puede agregar a elementos HTML de 3 maneras:</p>
+    <ul>
+        <li>En línea : mediante el uso del atributo de estilo en elementos HTML.</li>
+        <li>Interno : mediante el uso de un style elemento en la head sección.</li>
+        <li>Externo : mediante el uso de un archivo CSS externo.</li>
+    </ul>
+    <hr>
+
+    <h2>El atributo de estilo HTML</h2>
+    <p>p style="propiedad:valor;"/p</p>
+    <hr>
+
+    <h2>Color de fondo</h2>
+    <p>La background-color propiedad CSS define el color de fondo para un elemento HTML.</p>
+    <hr>
+
+    <h2 style="color: blue;">Color de texto</h2>
+    <p style="color: red;">La color propiedad CSS define el color del texto para un elemento HTML.</p>
+    <hr>
+
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Fuentes</h2>
+    <p style="font-family: 'Courier New', Courier, monospace;">La font-family propiedad CSS define la fuente que se utilizará para un elemento HTML.</p>
+    <hr>
+
+    <h2>Tamano del texto</h2>
+    <p style="font-size: 100%;">La font-size propiedad CSS define el tamaño del texto para un elemento HTML.</p>
+    <p style="font-size: 50px;">Grande</p>
+    <hr>
+
+    <h2 style="text-align:center;">Alineación del texto</h2>
+    <p>La text-alignpropiedad CSS define la alineación horizontal del texto para un elemento HTML.</p>
+    <hr>
+
+    <h2>Nombres de colores</h2>
+    <p>En HTML, se puede especificar un color utilizando un nombre de color.</p>
+    <p>HTML admite 140 nombres de color estándar. <a href="https://www.w3schools.com/colors/colors_names.asp">Nombres de colores</a></p>
+    <h1 style="background-color:Tomato;">Tomato</h1>
+    <h1 style="background-color:Orange;">Orange</h1>
+    <h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+    <h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+    <h1 style="background-color:Gray;">Gray</h1>
+    <h1 style="background-color:SlateBlue;">SlateBlue</h1>
+    <h1 style="background-color:Violet;">Violet</h1>
+    <h1 style="background-color:LightGray;">LightGray</h1>
+    <hr>
+
+    <h2>Color del borde</h2>
+    <p>Puede establecer el color de los bordes.</p>
+    <h1 style="border: 2px solid Tomato;">Tomato</h1>
+    <h1 style="border: 2px solid DodgerBlue;">DodgerBlue</h1>
+    <h1 style="border: 2px solid Violet;">Violet</h1>
+    <hr>
+
+    <h2>Valores de color</h2>
+    <p>En HTML, los colores también se pueden especificar utilizando valores RGB, valores HEX, valores HSL, valores RGBA y valores HSLA.</p>
+    <ul>
+        <li>Valor RGB</li>
+            <p>En HTML, un color puede especificarse como un valor RGB, utilizando esta fórmula: rgb ( rojo, verde , azul ). Cada parámetro (rojo, verde y azul) define la intensidad del color entre 0 y 255. Para mostrar el negro, configure todos los parámetros de color en 0, Para mostrar el blanco, configure todos los parámetros de color en 255.</p>
+            <h1 style="background-color:rgb(255, 99, 71);">Tomato</h1><hr>
+        <li>Valores Grises con RGB</li>
+            <p>Los tonos de gris a menudo se definen utilizando valores iguales para las 3 fuentes de luz</p>
+            <h1 style="background-color: rgb(0, 0, 0);">0</h1>
+            <h1 style="background-color: rgb(60, 60, 60);">60</h1>
+            <h1 style="background-color: rgb(120, 120, 120);">120</h1>
+            <h1 style="background-color: rgb(180, 180, 180);">180</h1>
+            <h1 style="background-color: rgb(240, 240, 240);">240</h1>
+            <h1 style="background-color: rgb(255, 255, 255);">255</h1><hr>
+        <li>Valor Hexadecimal</li>
+            <p>En HTML, se puede especificar un color utilizando un valor hexadecimal en la forma:# rrggbb. Donde rr (rojo), gg (verde) y bb (azul) son valores hexadecimales entre 00 y ff (igual que el decimal 0-255).</p>
+            <h1 style="background-color:#ff6347;">Tomato</h1><hr>
+        <li>Valores grises con Hexadecimal</li>
+            <p>Los tonos de gris a menudo se definen utilizando valores iguales para las 3 fuentes de luz.</p>
+            <h1 style="background-color:#000000;">#000000</h1>
+            <h1 style="background-color:#3c3c3c;">#3c3c3c</h1>
+            <h1 style="background-color:#787878;">#787878</h1>
+            <h1 style="background-color:#b4b4b4;">#b4b4b4</h1>
+            <h1 style="background-color:#f0f0f0;">#f0f0f0</h1>
+            <h1 style="background-color:#ffffff;">#ffffff</h1><hr>
+        <li>Valor HSL</li>
+            <p>En HTML, se puede especificar un color utilizando matiz, saturación y luminosidad (HSL) en la forma: hsl ( tono , saturación , luminosidad ). El tono es un grado en la rueda de color de 0 a 360. 0 es rojo, 120 es verde y 240 es azul. La saturación es un valor porcentual, 0% significa un tono de gris y 100% es el color completo. La claridad también es un porcentaje, 0% es negro, 50% no es claro ni oscuro, 100% es blanco.</p>
+            <h1 style="background-color:hsl(9, 100%, 64%);">Tomato</h1><hr>
+        <li>Saturación</li>
+            <p>La saturación se puede describir como la intensidad de un color. 100% es color puro, sin sombras de gris. 50% es 50% gris, pero aún puede ver el color. 0% es completamente gris, ya no puede ver el color.</p>
+            <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h1><hr>
+        <li>Ligereza</li>
+            <p>La claridad de un color se puede describir como la cantidad de luz que desea dar al color, donde 0% significa que no hay luz (negro), 50% significa 50% de luz (ni oscura ni clara) 100% significa claridad total (blanco).</p>
+            <h1 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h1>
+            <h1 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h1>
+            <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+            <h1 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h1>
+            <h1 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h1>
+            <h1 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h1><hr>
+        <li>Valores grises con HSL</li>
+            <p>Los tonos de gris a menudo se definen configurando el tono y la saturación en 0, y ajustando la claridad del 0% al 100% para obtener tonos más oscuros / claros.</p>
+            <h1 style="background-color:hsl(0, 0%, 0%);">hsl(0, 0%, 0%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 24%);">hsl(0, 0%, 24%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 47%);">hsl(0, 0%, 47%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 71%);">hsl(0, 0%, 71%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 94%);">hsl(0, 0%, 94%)</h1>
+            <h1 style="background-color:hsl(0, 0%, 100%);">hsl(0, 0%, 100%)</h1><hr>
+        <li>Valor RGBA</li>
+            <p>Los valores de color RGBA son una extensión de los valores de color RGB con un canal alfa, que especifica la opacidad de un color. El parámetro alfa es un número entre 0.0 (totalmente transparente) y 1.0 (no transparente en absoluto).</p>
+            <h1 style="background-color:rgba(255, 99, 71, 0.5);">Tomato 50% transparente</h1><hr>
+        <li>Valor HSLA</li>
+            <p>Los valores de color HSLA son una extensión de los valores de color HSL con un canal alfa, que especifica la opacidad de un color. El parámetro alfa es un número entre 0.0 (totalmente transparente) y 1.0 (no transparente en absoluto).</p>
+            <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">Tomato 50% transparente</h1><hr>
+    </ul>
+    <hr>
+
+    <h2>Relleno CSS</h2>
+    <p>La paddingpropiedad CSS define un relleno (espacio) entre el texto y el borde.</p>
+    <p style="border: 1px solid black; padding: 50px;">Texto.</p><hr>
+
+    <h2>Margen CSS</h2>
+    <p>La marginpropiedad CSS define un margen (espacio) fuera del borde.</p>
+    <p style="border: 1px solid black; margin: 50px;">Texto.</p><hr>
+
+
+    <h2>El atributo id</h2>
+    <p>Para definir un estilo específico para un elemento especial, agregue un idatributo al elemento.</p>
+    <p id="demo">Texto con id.</p><hr>
+
+    <h2>El atributo de clase</h2>
+    <p>Para definir un estilo para tipos especiales de elementos, agregue un classatributo al elemento.</p>
+    <p class="demo">Texto con clase</p><hr>
+
+    <h2>Referencias externas</h2>
+    <p>Se puede hacer referencia a las hojas de estilo externas con una URL completa o con una ruta relativa a la página web.</p><hr>
+
+    <h2>Colores de enlace HTML</h2>
+    <p>Por defecto, aparecerá un enlace como este (en todos los navegadores):</p>
+    <ul>
+        <li>Un enlace no visitado está subrayado y azul</li>
+        <li>Un enlace visitado está subrayado y morado</li>
+        <li>Un enlace activo está subrayado y rojo</li>
+    </ul>
+    <p>Puede cambiar los colores predeterminados mediante CSS.</p>
+    <a id="demo1" href="https://www.microsoft.com/es-es/tips/home?fbclid=IwAR3wFVi5cSgo_EA0_DcHTYzQsD5ZPSrXXXAEyplRu_PwlOp4O_mF-EaqacI" target="_blank">Colores de enlace</a>
+
+    <p>Los enlaces también se pueden diseñar como un botón, mediante CSS.</p>
+    <a id="demo2" href="https://github.com/FredySimon/CSS">Tutorial CSS</a>
+    <hr>
+
+</body>
+</html>

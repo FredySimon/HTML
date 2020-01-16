@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diseño 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        nav {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            background: #cccccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+
+        footer {
+            background-color: #777777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media(max-width:600px) {
+            section{
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Flexbox</h1>
+    <hr>
+
+    <header>
+            <h2>Ciudades</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Tokio</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>London</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, consequuntur labore. Cum, animi! Reprehenderit tenetur molestias, neque quas veniam voluptate libero voluptates nihil laudantium modi ipsam, facilis incidunt praesentium repellat.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam magni libero velit. Iusto repellat, dolorem rem accusantium in repellendus adipisci animi hic natus sed esse nihil saepe officiis ipsam ipsa!</p>
+            </article>
+        </section>
+    
+        <footer>
+            <p>Footer</p>
+        </footer>
+        <hr>
+
+</body>
+
+</html>

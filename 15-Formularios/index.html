@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <hr>
+
+    <p>El form elemento HTML define un formulario que se utiliza para recopilar la entrada del usuario. Los elementos de formulario son diferentes tipos de elementos de entrada, como campos de texto, casillas de verificación, botones de opción, botones de envío y más. </p>
+    <p>El input elemento es el elemento de forma más importante. EL elemento se puede mostrar de varias maneras, dependiendo del atributo de tipo. </p>
+    <p>El controlador de formulario se especifica en el atributo de acción del formulario. El action atributo define la acción a realizar cuando se envía el formulario.</p>
+    <p>Si action se omite el atributo, la acción se establece en la página actual.</p>
+    <p>El target atributo especifica si el resultado enviado se abrirá en una nueva pestaña del navegador, un marco o en la ventana actual.</p>
+    <p>Otros valores legales son "_parent", "_top" o un nombre que representa el nombre de un iframe.</p>
+    <p>El method atributo especifica el método HTTP ( GET o POST ) que se utilizará al enviar los datos del formulario.</p>
+    <p>El método predeterminado al enviar datos del formulario es GET. Sin embargo, cuando se utiliza GET, los datos del formulario enviado serán visibles en el campo de dirección de la página.</p>
+    <ul>
+      <li>Agrega datos de formulario a la URL en pares de nombre / valor.</li>
+      <li>La longitud de una URL es limitada (2048 caracteres).</li>
+      <li>¡Nunca use GET para enviar datos confidenciales! (será visible en la URL).</li>
+      <li>Útil para envíos de formularios donde un usuario desea marcar el resultado.</li>
+      <li>GET es mejor para datos no seguros, como cadenas de consulta en Google.</li>
+    </ul>
+    <p>Utilice siempre POST si los datos del formulario contienen información confidencial o personal. El método POST no muestra los datos del formulario enviado en el campo de dirección de página.</p>
+    <ul>
+      <li>POST no tiene limitaciones de tamaño y puede usarse para enviar grandes cantidades de datos.</li>
+      <li>Los envíos de formularios con POST no pueden marcarse.</li>
+    </ul>
+    <p>Cada campo de entrada debe tener un name atributo para ser enviado. Si namese omite el atributo, los datos de ese campo de entrada no se enviarán en absoluto.</p>
+    <p>El fieldset elemento se usa para agrupar datos relacionados en un formulario. El legend elemento define un título para el elemento.</p>
+    <hr>
+
+    <h2>Atributos de formulario</h2>
+    <p><b>accept-charset: </b>Especifica el conjunto de caracteres utilizado en el formulario enviado (predeterminado: el conjunto de caracteres de la página).</p>
+    <p><b>action: </b>Especifica una dirección (url) donde enviar el formulario (predeterminado: la página de envío).</p>
+    <p><b>autocomplete: </b>Especifica si el navegador debe completar automáticamente el formulario (predeterminado: activado).</p>
+    <p><b>enctype: </b>Especifica la codificación de los datos enviados (valor predeterminado: está codificado en url).</p>
+    <p><b>method: </b>Especifica el método HTTP utilizado al enviar el formulario (predeterminado: GET).</p>
+    <p><b>name: </b>Especifica un nombre utilizado para identificar el formulario (para uso DOM: document.forms.name).</p>
+    <p><b>novalidate: </b>Especifica que el navegador no debe validar el formulario.</p>
+    <p><b>target: </b>Especifica el destino de la dirección en el atributo de acción (predeterminado: _self).</p>
+    <hr>
+
+    <h2>El elemento select</h2>
+    <p>Define una lista desplegable.</p>
+    <p>Los option elementos definen una opción que se puede seleccionar.</p>
+    <p>De manera predeterminada, se selecciona el primer elemento de la lista desplegable. Para definir una opción preseleccionada, agregue el selected atributo a la opción.</p>
+    <p>Use el sizeatributo para especificar el número de valores visibles.</p>
+    <p>Use el multiple atributo para permitir al usuario seleccionar más de un valor.</p>
+    <hr>
+
+    <h2>El elemento textarea</h2>
+    <p>Define un campo de entrada de varias líneas (un área de texto).</p>
+    <p>El rows atributo especifica el número visible de líneas en un área de texto.</p>
+    <p>El cols atributo especifica el ancho visible de un área de texto.</p>
+    <p>También puede definir el tamaño del área de texto utilizando CSS.</p>
+    <hr>
+
+    <h2>El elemento button</h2>
+    <p>Define un botón en el que se puede hacer clic.</p>
+    <hr>
+
+    <h2>El elemento datalist</h2>
+    <p>Especifica una lista de opciones predefinidas para un input.</p>
+    <p>Los usuarios verán una lista desplegable de las opciones predefinidas a medida que ingresan datos.</p>
+    <p>El list atributo del input, debe referirse al id del datalist.</p>
+    <hr>
+
+    <h2>El elemento output</h2>
+    <p>Representa el resultado de un cálculo (como el realizado por un script).</p>
+    <hr>
+
+    <h2>El elemento input</h2>
+    <p>Estos son los diferentes tipos de entrada que puede usar en HTML:</p>
+    <ol>
+      <li><h3>button</h3></li>
+      <li><h3>checkbox</h3></li>
+        <p>define una casilla de verificación. Las casillas de verificación le permiten al usuario seleccionar CERO o MÁS opciones de un número limitado de opciones.</p>
+      <li><h3>color</h3></li>
+        <p>utiliza para campos de entrada que deben contener un color. Dependiendo de la compatibilidad del navegador, puede aparecer un selector de color en el campo de entrada.</p>
+      <li><h3>date</h3></li>
+        <p>se utiliza para los campos de entrada que deben contener una fecha. Dependiendo del soporte del navegador, un selector de fecha puede aparecer en el campo de entrada. También puede usar los atributos min y max para agregar restricciones a las fechas.</p>
+      <li><h3>datetime-local</h3></li>
+        <p>especifica un campo de entrada de fecha y hora, sin zona horaria. Dependiendo del soporte del navegador, un selector de fecha puede aparecer en el campo de entrada.</p>
+      <li><h3>email</h3></li>
+        <p>utiliza para campos de entrada que deben contener una dirección de correo electrónico. Dependiendo del soporte del navegador, la dirección de correo electrónico se puede validar automáticamente cuando se envía.</p>
+      <li><h3>file</h3></li>
+      <li><h3>hidden</h3></li>
+      <li><h3>image</h3></li>
+      <li><h3>month</h3></li>
+        <p>permite al usuario seleccionar un mes y año.
+          Dependiendo del soporte del navegador, un selector de fecha puede aparecer en el campo de entrada.</p>
+      <li><h3>number</h3></li>
+          <p>define un campo de entrada numérico. También puede establecer restricciones sobre qué números se aceptan.</p>
+      <li><h3>password</h3></li>
+        <p>define un campo de contraseña. Los caracteres en un campo de contraseña están enmascarados (se muestran como asteriscos o círculos).</p>
+      <li><h3>radio</h3></li>
+        <p>define un botón de radio. Los botones de opción le permiten al usuario seleccionar SOLO UNA de un número limitado de opciones.</p>
+      <li><h3>range</h3></li>
+          <p>define un control para la introducción de un número cuyo valor exacto no es importante (como un control deslizante). Rango por defecto es de 0 a 100. Sin embargo, se puede establecer restricciones en lo que los números son aceptados con el min, max y step atributos</p>
+      <li><h3>reset</h3></li>
+        <p>define un botón de reinicio que se recuperan todos los valores del formulario a sus valores por defecto.  Si omite el atributo de valor del botón, este obtendrá un texto predeterminado. </p>
+      <li><h3>search</h3></li>
+          <p>se utiliza para campos de búsqueda (un campo de búsqueda se comporta como un campo de texto normal).</p>
+      <li><h3>submit</h3></li>
+        <p>define un botón para enviar datos de formulario a un controlador de formulario. Si omite el atributo de valor del botón Enviar, el botón obtendrá un texto predeterminado.</p>
+      <li><h3>tel</h3></li>
+          <p>utiliza para campos de entrada que deben contener un número de teléfono.</p>
+      <li><h3>text</h3></li>
+        <p>define un campo de entrada de texto de una línea. </p>
+      <li><h3>time</h3></li>
+          <p>permite al usuario seleccionar un tiempo (sin zona horaria). Dependiendo del soporte del navegador, un selector de tiempo puede aparecer en el campo de entrada.</p>
+      <li><h3>url</h3></li>
+          <p>usa para campos de entrada que deben contener una dirección URL. Dependiendo de la compatibilidad del navegador, el campo de la URL se puede validar automáticamente cuando se envía. Algunos teléfonos inteligentes reconocen el tipo de url y agregan ".com" al teclado para que coincida con la entrada de url.</p>
+      <li><h3>week</h3></li>
+          <p>permite al usuario seleccionar una semana y el año.</p>
+    </ol>
+    <p>Los nuevos tipos de entrada que no son compatibles con navegadores web más antiguos se comportarán como que fueran de tipo texto.</p>
+    <hr>
+
+    <h2>Restricciones de entrada</h2>
+    <ol>
+      <li><b>checked: </b>Especifica que se debe preseleccionar un campo de entrada cuando se carga la página (para type = "checkbox" o type = "radio").</li>
+      <li><b>disabled: </b>Especifica que un campo de entrada debe estar deshabilitado.</li>
+      <li><b>max: </b>Especifica el valor máximo para un campo de entrada.</li>
+      <li><b>maxlength: </b>Especifica el número máximo de caracteres para un campo de entrada.</li>
+      <li><b>min: </b>Especifica el valor mínimo para un campo de entrada.</li>
+      <li><b>pattern: </b>Especifica una expresión regular para verificar el valor de entrada.</li>
+      <li><b>readonly: </b>Especifica que un campo de entrada es de solo lectura (no se puede cambiar).</li>
+      <li><b>required: </b>Especifica que se requiere un campo de entrada (debe completarse).</li>
+      <li><b>size: </b>Especifica el ancho (en caracteres) de un campo de entrada.</li>
+      <li><b>step: </b>Especifica los intervalos de números legales para un campo de entrada.</li>
+      <li><b>value: </b>Specifies the default value for an input field.</li>
+    </ol>
+    <hr>
+
+    <h2>Atributos</h2>
+    
+    <p><b>value: </b>Especifica el valor inicial para un campo de entrada.</p>
+    <p><b>readonly: </b>Especifica que el campo de entrada es de solo lectura (no se puede cambiar).</p>
+    <p><b>disabled: </b>Especifica que el campo de entrada está deshabilitado. Un campo de entrada deshabilitado no se puede usar ni hacer clic, y su valor no se enviará al enviar el formulario.</p>
+    <p><b>size: </b>Especifica el tamaño (en caracteres) para el campo de entrada.</p>
+    <p><b>maxlength: </b>Especifica la longitud máxima permitida para el campo de entrada, el campo de entrada no aceptará más que el número permitido de caracteres.</p>
+    <p><b>autocomplete: </b>Especifica si un formulario o campo de entrada debe tener autocompletado activado o desactivado.</p>
+    <p><b>autofocus: </b>Especifica que el campo de entrada debería enfocarse automáticamente cuando se carga la página.</p>
+    <p><b>form: </b>Especifica una o más formas a las que pertenece un elemento.</p>
+    <input type="text" form="formulario" placeholder="Pertenexco al formulario de abajo." size="40">
+    <p><b>formaction: </b>Especifica la URL de un archivo que procesará el control de entrada cuando se envíe el formulario. El atributo de formación anula el atributo de acción del elemento form. El atributo de formación se usa con type="submit"y type="image".</p>
+    <p><b>formenctype: </b>Especifica cómo deben codificarse los datos del formulario cuando se envían (solo para formularios con method = "post"). Anula el atributo enctype del elemento form. El formenctypeatributo se usa con type="submit"y type="image".</p>
+    <p><b>formmethod: </b>Define el método HTTP para enviar datos de formulario a la URL de acción. El formmethodatributo anula el atributo de método del form elemento. El formmethod atributo se puede usar con type="submit" y type="image".</p>
+    <p><b>formnovalidate: </b>Anula el atributo novalidate del elemento form. El formnovalidateatributo se puede usar con type="submit".</p>
+    <p><b>formtarget: </b> Especifica un nombre o una palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. El formtarget atributo anula el atributo de destino del elemento form. El formtargetatributo se puede usar con type="submit"y type="image".</p>
+    <p><b>height: </b>Especifica la altura.</p>
+    <p><b>width: </b>Especifica el ancho.</p>
+    <p><b>list: </b>Se refiere a un elemento datalist que contiene opciones predefinidas para un elemento input.</p>
+    <p><b>min y max: </b>Especifican los valores mínimo y máximo para un elemento input. Los atributos miny maxfuncionan con los siguientes tipos de entrada: número, rango, fecha, fecha-hora local, mes, hora y semana.</p>
+    <p><b>multiple: </b>Especifica que el usuario puede ingresar más de un valor en el input elemento, funciona con los siguientes tipos de entrada: correo electrónico y archivo.</p>
+    <p><b>pattern(regexp): </b>Funciona con los siguientes tipos de entrada: texto, búsqueda, url, tel, correo electrónico y contraseña. Use el atributo de título global para describir el patrón para ayudar al usuario.</p>
+    <p><b>placeholder: </b>Especifica una pista que describe el valor esperado de un campo de entrada (un valor de muestra o una breve descripción del formato). La pista se muestra en el campo de entrada antes de que el usuario ingrese un valor. Funciona con los siguientes tipos de entrada: texto, búsqueda, url, tel, correo electrónico y contraseña.</p>
+    <p><b>required: </b>Funciona con los siguientes tipos de entrada: texto, búsqueda, url, teléfono, correo electrónico, contraseña, selectores de fecha, número, casilla de verificación, radio y archivo.</p>
+    <p><b>step: </b>Especifica los intervalos de números legales para un elemento input. Ejemplo: si step = "3", los números legales podrían ser -3, 0, 3, 6, etc. El atributo de paso se puede usar junto con los atributos máximo y mínimo para crear un rango de valores legales. Funciona con los siguientes tipos de entrada: número, rango, fecha, fecha-hora local, mes, hora y semana.</p>
+    <p><b>novalidate: </b>Cuando está presente, novalidate especifica que los datos del formulario no deben validarse cuando se envían. Este es un atributo de formulario.</p>
+    <hr>
+
+    <form id="formulario" class="" method="post" target="_blank" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      <div style="border: 1px solid black; padding: 20px;">
+        Campo:<br>
+        <input type="text" name="campo" size="40">
+        <br>
+        Campo 1:<br>
+        <input type="text" name="campo1" disabled>
+        <br>
+        Campo 2:<br>
+        <input type="text" maxlength="5">
+        <br>
+        Campo 3:<br>
+        <input type="text" autocomplete="on">
+        <br>
+        Campo 4:<br>
+        <input type="text" autofocus>
+      </div>
+      <fieldset>
+        <legend>fieldset</legend>
+        <div class="">
+            <label for="nombre">Nombre: </label>
+            <input id="nombre" type="text" name="name" value="Nombre">
+        </div>
+        <div class="">
+            <label >Ingrese su correo: <input type="email" name="correo" value="" required></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Datos</legend>
+        <div class="">
+          <label>Ingrese su contraseña<input id="password" type="password" name="password" value=""></label>
+          <input type="password" name="password" value="" placeholder="Ingrese su contraseña" required>
+        </div>
+        <div class="">
+          <label>Fecha de nacimiento<input type="date" name="" value="" min="2017-09-01"></label>
+          <label></label>
+        </div>
+        <div class="">
+          <label>Cantidad <input type="number" name="" value="5" readonly></label>
+          <label>Cantidad <input type="number" name="" value="5" min="1" max="5"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Pasatiempos</legend>
+        <label><input type="checkbox" name="" value="">Deportes</label>
+        <label><input type="checkbox" name="" value="">Cine</label>
+        <label><input type="checkbox" name="" value="">Música</label>
+        <label><input type="checkbox" name="" value="">Leer</label>
+      </fieldset>
+      <fieldset>
+        <legend>genero</legend>
+        <input type="radio" name="genero" value="Hombre">Hombre<br>
+        <label><input type="radio" name="genero" value="">Mujer</label>
+        <label><input type="radio" name="genero" value="">Otro</label>
+      </fieldset>
+      <fieldset>
+        <legend>Opciones</legend>
+        <label for="country">Escoge tu pais</label>
+        <select class="" name="country" id="country" multiple size="2">
+          <optgroup label="America">
+            <option value="Perú">Perú</option>
+            <option value="Chile">Chile</option>
+            <option value="venezuela">Venezuela</option>
+          </optgroup>
+          <optgroup label="Europa">
+            <option value="Perú">España</option>
+            <option value="Chile">Italia</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Opciones</legend>
+        <label for="country">Escoge tu pais</label>
+        <select class="" name="country" id="country" >
+          <optgroup label="America">
+            <option value="Perú">Perú</option>
+            <option value="Chile">Chile</option>
+            <option value="venezuela">Venezuela</option>
+          </optgroup>
+          <optgroup label="Europa">
+            <option value="Perú">España</option>
+            <option value="Chile" selected>Italia</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>textarea</legend>
+        <textarea name="name" rows="10" cols="80" placeholder="Mensaje..."></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>datalist</legend>
+        <input list="lista">
+        <datalist id="lista">
+          <option value="Internet Explorer"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </datalist>
+      </fieldset>
+      <fieldset>
+        <legend>Output</legend>
+        0
+        <input type="range" id="a" name="a" value="0" min="0" max="20" step="2">
+        100 +
+        <input type="number" id="b" name="b" value="50"> 
+        =
+        <output name="x"></output> 
+      </fieldset>
+      <fieldset>
+        <legend>Color favorito</legend>
+        <input type="color" name="color" value="#FFFFFF">
+      </fieldset>
+      <fieldset>
+        <legend>Fecha y Hora</legend>
+        <input type="datetime-local" name="fechaYhora">
+      </fieldset>
+      <fieldset>
+        <legend>Archivo</legend>
+        <input type="file" value="adjuntar">
+        <input type="file" value="Archivos multiples" multiple>
+      </fieldset>
+      <fieldset>
+        <legend>Mes y tiempo</legend>
+        <input type="month">
+        <input type="time">
+      </fieldset>
+      <fieldset>
+        <legend>Busqueda</legend>
+        <input type="search">
+      </fieldset>
+      <fieldset>
+        <legend>Celular</legend>
+        <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        <span>Formato: 000-00-000</span>
+      </fieldset>
+      <fieldset>
+        <legend>URL</legend>
+        <input type="url">
+      </fieldset>
+      <fieldset>
+        <legend>Semana</legend>
+        <input type="week">
+      </fieldset>
+      <fieldset>
+        <legend>Restricción</legend>
+        <input type="text" pattern="[A-Za-z]{3}" title="Ingrese tres letras">
+      </fieldset>
+      <fieldset>
+        <legend>Rango</legend>
+        <input type="number" step="10">
+      </fieldset>
+  
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+      <input type="button" value="Cambiar" onclick="this.style.background='blue'">
+      <input type="submit" formtarget="_blank" value="Enviar a una nueva pestaña">
+      <input type="image" src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4f6.png" alt="enviar" width="48" height="48">
+      <button type="button" onclick="this.style.background='red'">Click</button>
+    </form>
+
+    <script >
+        document.getElementById('password').addEventListener('keyup', e =>{
+          console.log(e.target.value)
+        })
+    </script>
+
+</body>
+</html>
+
+
+
