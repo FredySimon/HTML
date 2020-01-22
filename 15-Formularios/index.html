@@ -166,10 +166,10 @@
     <p><b>novalidate: </b>Cuando está presente, novalidate especifica que los datos del formulario no deben validarse cuando se envían. Este es un atributo de formulario.</p>
     <hr>
 
-    <form id="formulario" class="" method="post" target="_blank" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-      <div style="border: 1px solid black; padding: 20px;">
+    <form id="formulario" class="" method="post" target="_blank" oninput="x.value=parseInt(a.value)+parseInt(b.value)" autocomplete="on">
+      <div style="border: 1px solid black; padding: 20px;" >
         Campo:<br>
-        <input type="text" name="campo" size="40">
+        <input type="text" name="campo" size="40" autocomplete="on">
         <br>
         Campo 1:<br>
         <input type="text" name="campo1" disabled>
@@ -178,7 +178,7 @@
         <input type="text" maxlength="5">
         <br>
         Campo 3:<br>
-        <input type="text" autocomplete="on">
+        <input type="text">
         <br>
         Campo 4:<br>
         <input type="text" autofocus>
@@ -259,7 +259,7 @@
         <legend>datalist</legend>
         <input list="lista">
         <datalist id="lista">
-          <option value="Internet Explorer"></option>
+          <option label="Navegador" value="Internet Explorer"></option>
           <option value="Firefox"></option>
           <option value="Chrome"></option>
           <option value="Opera"></option>
@@ -325,6 +325,10 @@
       <input type="submit" formtarget="_blank" value="Enviar a una nueva pestaña">
       <input type="image" src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4f6.png" alt="enviar" width="48" height="48">
       <button type="button" onclick="this.style.background='red'">Click</button>
+      <input type="button" value="Enviar a otro servidor" formaction="">
+      <input type="submit" value="Enviar a Multipart/form-data" formenctype="multipart/form-data">
+      <input type="submit" formmethod="GET" value="Cambiar metodo al enviar">
+      <input type="submit" formnovalidate value="Enviar sin validación">
     </form>
 
     <script >

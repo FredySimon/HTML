@@ -18,6 +18,10 @@ tr:nth-child(even){
   background-color: #dddddd;
 }
 
+/* tr:nth-child(odd){
+  background-color: paleturquoise;
+} */
+
 table#demo1{
   width:100%; 
   border-spacing:15px; 

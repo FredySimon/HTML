@@ -4,12 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Ejemplos HTML5">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Curso,">
+    <meta name="author" content="Fredy">
     <title>Ejemplos</title>
+    <style>
+    a.demo:link{
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a.demo:visited{
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a.demo:hover{
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a.demo:active{
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td{
+        padding: 5px;
+        text-align: left;
+    }
+    </style>
+    <base href="https://www.w3schools.com/images/" target="_blank">
 </head>
 <body>
     <h1>Ejemplos</h1>
     <hr>
 
-    
+    <h2>Manipulación de elementos</h2>
+    <div style="border: 5px solid black; padding: 50px; height: 300px;">
+        <div style="position: relative; margin-bottom: 15px;">
+            <div style="opacity: 0.5; position: absolute; left: 50px; top: -30px; width: 300px; height: 150px; background-color: cornflowerblue;"></div>
+            <div style="opacity:0.5; position: absolute; left: 120px; top: 20px; width: 100px; height: 170px; background-color: darkgreen;"></div>
+            <div style="margin-top: 30px; width: 360px; height: 130px; padding: 20px; border-radius: 10px; border: 10px solid red; font-size: 120%;">
+                <h1>CSS = Estilos y Colores</h1>
+                <div style="letter-spacing: 12px; font-size: 15px; position: relative; left: 25px; top: 25px; text-align: center;">Manipulación de texto</div>
+                <div style="letter-spacing: 12px; font-size: 15px; position: relative; left: 25px; top: 30px; color: skyblue;">
+                    Colores y <span style="background-color: slateblue; color: white;">Cajas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Colores de Links</h2>
+    <a class="demo" href="../00-Introducción/index.html" target="_blank">Facebook</a>
+    <hr>
+
+    <h2>Enviar Correo</h2>
+    <a href="mailto:fjsimon__8@outlook.com?Subject=Hola%20de%20nuevo" target="_top">Enviar correo</a>
+    <hr>
+
+    <h2>Tablas Con Encabezados Verticales</h2>
+    <table style="width: 100%;">
+        <caption>Datos</caption>
+        <tr>
+            <th>Nombre:</th>
+            <td>Fredy</td>
+        </tr>
+        <tr>
+            <th>Celular:</th>
+            <td>0000-0000</td>
+        </tr>
+        <tr>
+            <th>Correo Electronico:</th>
+            <td>fs@outlook.com</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2>Tabla con etiquetas HTML dentro</h2>
+    <table>
+        <tr>
+            <td>
+                Esta celda contiene parrafos:
+                <p>ABCDEF</p>
+                <p>GHIJKL</p>
+                <p>MNÑOPQ</p>
+            </td>
+            <td>
+                Esta celda contiene una tabla:
+                <table>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Esta celda contiene una lista:
+                <ol>
+                    <li>Manzanas</li>
+                    <li>Bananos</li>
+                    <li>Piñas</li>
+                    <li>Uvas</li>
+                </ol>
+            </td>
+            <td>HOLA</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2>LA etiqueta meta define información para el navegador.</h2>
+    <hr>
+
+    <h2>Imagen Externa</h2>
+    <img src="html5.gif" alt="HTML5">
+    <hr>
+
+    <h2>Etiqueta noscript</h2>
+    <noscript>¡Tu navegador no tiene soporte para JavaScript! (Se muestra en los navegadores que no tienen soporte).</noscript>
+    <hr>
+
+    <h2>CANVAS</h2>
+    <canvas id="grafica" width="200" height="100" style="border: 1px solid black;">Tu navegador no tiene soporte para la etiqueta canvas.</canvas>
+    <script>
+    var cuadro = document.getElementById("grafica");
+    var contexto = cuadro.getContext("2d");
+    contexto.fillStyle = "red";
+    contexto.fillRect(0,0,180,80);
+    </script>
+    <hr>
+
+
 </body>
 </html>
